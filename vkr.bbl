@@ -1,0 +1,193 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
+
+\bibitem{vaswani2017attention}
+\selectlanguageifdefined{english}
+Attention Is All You Need~/ Ashish~Vaswani, Noam~Shazeer, Niki~Parmar et~al.~//
+  Advances in Neural Information Processing Systems. \BibDash
+\newblock Vol.~30. \BibDash
+\newblock 2017.
+
+\bibitem{bonferroni1936teoria}
+\selectlanguageifdefined{english}
+\BibEmph{Bonferroni~Carlo}. Teoria statistica delle classi e calcolo delle
+  probabilit\`{a}~// \BibEmph{Pubblicazioni del R Istituto Superiore di Scienze
+  Economiche e Commericiali di Firenze}. \BibDash
+\newblock 1936. \BibDash
+\newblock Vol.~8. \BibDash
+\newblock P.~3--62.
+
+\bibitem{cochran1950comparison}
+\selectlanguageifdefined{english}
+\BibEmph{Cochran~William~G.} The Comparison of Percentages in Matched
+  Samples~// \BibEmph{Biometrika}. \BibDash
+\newblock 1950. \BibDash
+\newblock Vol.~37, no. 3/4. \BibDash
+\newblock P.~256--266.
+
+\bibitem{dietterich1998approximate}
+\selectlanguageifdefined{english}
+\BibEmph{Dietterich~Thomas~G.} Approximate Statistical Tests for Comparing
+  Supervised Classification Learning Algorithms~// \BibEmph{Neural
+  Computation}. \BibDash
+\newblock 1998. \BibDash
+\newblock Vol.~10, no.~7. \BibDash
+\newblock P.~1895--1923.
+
+\bibitem{efron1979bootstrap}
+\selectlanguageifdefined{english}
+\BibEmph{Efron~Bradley}. Bootstrap Methods: Another Look at the Jackknife~//
+  \BibEmph{The Annals of Statistics}. \BibDash
+\newblock 1979. \BibDash
+\newblock Vol.~7, no.~1. \BibDash
+\newblock P.~1--26.
+
+\bibitem{gudibande2023false}
+\selectlanguageifdefined{english}
+The False Promise of Imitating Proprietary LLMs~/ Arnav~Gudibande,
+  Eric~Wallace, Charlie~Snell et~al.~// \BibEmph{arXiv preprint
+  arXiv:2305.15717}. \BibDash
+\newblock 2023.
+
+\bibitem{patil2023gorilla}
+\selectlanguageifdefined{english}
+Gorilla: Large Language Model Connected with Massive APIs~/ Shishir~G~Patil,
+  Tianjun~Zhang, Xin~Wang, Joseph~E~Gonzalez~// \BibEmph{arXiv preprint
+  arXiv:2305.15334}. \BibDash
+\newblock 2023.
+
+\bibitem{zhou2023lima}
+\selectlanguageifdefined{english}
+LIMA: Less Is More for Alignment~/ Chunting~Zhou, Pengfei~Liu, Puxin~Xu
+  et~al.~// \BibEmph{Advances in Neural Information Processing Systems}.
+  \BibDash
+\newblock 2023. \BibDash
+\newblock Vol.~36.
+
+\bibitem{radford2019language}
+\selectlanguageifdefined{english}
+Language Models are Unsupervised Multitask Learners~/ Alec~Radford, Jeffrey~Wu,
+  Rewon~Child et~al.~// \BibEmph{OpenAI blog}. \BibDash
+\newblock 2019. \BibDash
+\newblock Vol.~1, no.~8. \BibDash
+\newblock P.~9.
+
+\bibitem{lester2021power}
+\selectlanguageifdefined{english}
+\BibEmph{Lester~Brian, Al-Rfou~Rami, Constant~Noah}. The Power of Scale for
+  Parameter-Efficient Prompt Tuning~// \BibEmph{arXiv preprint
+  arXiv:2104.08691}. \BibDash
+\newblock 2021.
+
+\bibitem{hu2022lora}
+\selectlanguageifdefined{english}
+LoRA: Low-Rank Adaptation of Large Language Models~/ Edward~J~Hu, Yelong~Shen,
+  Phillip~Wallis et~al.~// \BibEmph{arXiv preprint arXiv:2106.09685}. \BibDash
+\newblock 2022.
+
+\bibitem{mcnemar1947note}
+\selectlanguageifdefined{english}
+\BibEmph{McNemar~Quinn}. Note on the Sampling Error of the Difference Between
+  Correlated Proportions or Percentages~// \BibEmph{Psychometrika}. \BibDash
+\newblock 1947. \BibDash
+\newblock Vol.~12, no.~2. \BibDash
+\newblock P.~153--157.
+
+\bibitem{kirkpatrick2017overcoming}
+\selectlanguageifdefined{english}
+Overcoming Catastrophic Forgetting in Neural Networks~/ James~Kirkpatrick,
+  Razvan~Pascanu, Neil~Rabinowitz et~al.~// \BibEmph{Proceedings of the
+  National Academy of Sciences}. \BibDash
+\newblock 2017. \BibDash
+\newblock Vol. 114, no.~13. \BibDash
+\newblock P.~3521--3526.
+
+\bibitem{ding2023parameter}
+\selectlanguageifdefined{english}
+Parameter-Efficient Fine-Tuning of Large-Scale Pre-Trained Language Models~/
+  Ning~Ding, Yujia~Qin, Guang~Yang et~al.~// \BibEmph{Nature Machine
+  Intelligence}. \BibDash
+\newblock 2023. \BibDash
+\newblock Vol.~5. \BibDash
+\newblock P.~220--235.
+
+\bibitem{houlsby2019parameter}
+\selectlanguageifdefined{english}
+Parameter-Efficient Transfer Learning for NLP~/ Neil~Houlsby, Andrei~Giurgiu,
+  Stanislaw~Jastrzebski et~al.~// International Conference on Machine
+  Learning~/ PMLR. \BibDash
+\newblock 2019. \BibDash
+\newblock P.~2790--2799.
+
+\bibitem{yao2023react}
+\selectlanguageifdefined{english}
+ReAct: Synergizing Reasoning and Acting in Language Models~/ Shunyu~Yao,
+  Jeffrey~Zhao, Dian~Yu et~al.~// \BibEmph{arXiv preprint arXiv:2210.03629}.
+  \BibDash
+\newblock 2023.
+
+\bibitem{xi2023rise}
+\selectlanguageifdefined{english}
+The Rise and Potential of Large Language Model Based Agents: A Survey~/
+  Zhiheng~Xi, Wenxiang~Chen, Xin~Guo et~al.~// \BibEmph{arXiv preprint
+  arXiv:2309.07864}. \BibDash
+\newblock 2023.
+
+\bibitem{wang2023selfinstruct}
+\selectlanguageifdefined{english}
+Self-Instruct: Aligning Language Models with Self-Generated Instructions~/
+  Yizhong~Wang, Yeganeh~Kordi, Swaroop~Mishra et~al.~// \BibEmph{arXiv preprint
+  arXiv:2212.10560}. \BibDash
+\newblock 2023.
+
+\bibitem{sokolova2009systematic}
+\selectlanguageifdefined{english}
+\BibEmph{Sokolova~Marina, Lapalme~Guy}. A Systematic Analysis of Performance
+  Measures for Classification Tasks~// \BibEmph{Information Processing \&
+  Management}. \BibDash
+\newblock 2009. \BibDash
+\newblock Vol.~45, no.~4. \BibDash
+\newblock P.~427--437.
+
+\bibitem{qin2024toollearning}
+\selectlanguageifdefined{english}
+Tool Learning with Foundation Models~/ Yujia~Qin, Shengding~Liang, Yining~Ye
+  et~al.~// \BibEmph{arXiv preprint arXiv:2304.08354}. \BibDash
+\newblock 2024.
+
+\bibitem{schick2023toolformer}
+\selectlanguageifdefined{english}
+Toolformer: Language Models Can Teach Themselves to Use Tools~/ Timo~Schick,
+  Jane~Dwivedi-Yu, Roberto~Dess{\`\i} et~al.~// \BibEmph{arXiv preprint
+  arXiv:2302.04761}. \BibDash
+\newblock 2023.
+
+\bibitem{yandexgpt2024docs}
+\selectlanguageifdefined{english}
+\BibEmph{{Yandex Cloud}}. YandexGPT API: Документация. \BibDash
+\newblock \url{https://yandex.cloud/ru/docs/foundation-models/}. \BibDash
+\newblock 2024. \BibDash
+\newblock Дата обращения: 2026-03-01.
+
+\bibitem{goroshko2025otchet}
+\selectlanguageifdefined{english}
+\BibEmph{Горошко~А.~В.} Исследование влияния
+  дообучения большой языковой модели на
+  качество классификации инструментов
+  (Отчёт по учебной практике). \BibDash
+\newblock 2025. \BibDash
+\newblock СПбГУ, кафедра математики и
+  компьютерных наук. Неопубликованная
+  работа.
+
+\end{thebibliography}

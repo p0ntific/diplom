@@ -1,0 +1,439 @@
+% !TeX spellcheck = ru_RU
+% !TEX root = vkr.tex
+
+\section{Математические основы} \label{sec:background}
+
+В настоящем разделе вводятся формальные определения и математический аппарат,
+необходимые для строгой постановки задачи классификации инструментов, оценки
+качества моделей и статистического сравнения результатов.
+
+%% ===================================================================
+\subsection{Формализация задачи бинарной классификации}
+\label{subsec:binary-classification}
+
+Пусть $\mathcal{X}$ --- пространство признаков, элементами которого являются
+текстовые запросы пользователей к AI-агенту. Определим множество меток
+$\mathcal{Y} = \{0, 1\}$, где метка $0$ соответствует классу \texttt{TAG}
+(тегирование), а метка $1$ --- классу \texttt{GEO} (геокодирование).
+
+\begin{definition}[Классификатор]
+\label{def:classifier}
+Классификатором называется измеримое отображение
+$f_\theta \colon \mathcal{X} \to \mathcal{Y}$,
+параметризованное вектором параметров $\theta \in \Theta$, где
+$\Theta$ --- пространство параметров модели.
+\end{definition}
+
+Пусть дана выборка $\{(x_i, y_i)\}_{i=1}^{n}$, где
+$x_i \in \mathcal{X}$, $y_i \in \mathcal{Y}$.
+Обозначим предсказания классификатора $\hat{y}_i = f_\theta(x_i)$.
+
+\begin{definition}[Матрица ошибок]
+\label{def:confusion-matrix}
+Матрицей ошибок (confusion matrix) классификатора $f_\theta$ на выборке
+$\{(x_i, y_i)\}_{i=1}^{n}$ называется набор из четырёх величин:
+\begin{align}
+    \mathrm{TP} &= \bigl|\{i : \hat{y}_i = 1 \;\wedge\; y_i = 1\}\bigr|, \label{eq:tp} \\
+    \mathrm{FP} &= \bigl|\{i : \hat{y}_i = 1 \;\wedge\; y_i = 0\}\bigr|, \label{eq:fp} \\
+    \mathrm{TN} &= \bigl|\{i : \hat{y}_i = 0 \;\wedge\; y_i = 0\}\bigr|, \label{eq:tn} \\
+    \mathrm{FN} &= \bigl|\{i : \hat{y}_i = 0 \;\wedge\; y_i = 1\}\bigr|, \label{eq:fn}
+\end{align}
+где $|\cdot|$ обозначает мощность множества. Очевидно,
+$\mathrm{TP} + \mathrm{FP} + \mathrm{TN} + \mathrm{FN} = n$.
+\end{definition}
+
+На основании матрицы ошибок введём понятия ошибок первого и второго рода,
+интерпретация которых определяется выбором <<положительного>> класса.
+В нашей задаче положительным классом является \texttt{GEO} ($y = 1$).
+
+\begin{definition}[Ошибка I рода]
+\label{def:type-i-error}
+Ошибкой первого рода (<<ложная тревога>>) называется условная вероятность
+ошибочного отнесения объекта класса \texttt{TAG} к классу \texttt{GEO}:
+\begin{equation}
+    \alpha = P\bigl(f_\theta(x) = 1 \mid y = 0\bigr)
+            = \frac{\mathrm{FP}}{\mathrm{FP} + \mathrm{TN}}.
+    \label{eq:type-i}
+\end{equation}
+\end{definition}
+
+\begin{definition}[Ошибка II рода]
+\label{def:type-ii-error}
+Ошибкой второго рода (<<пропуск цели>>) называется условная вероятность
+ошибочного отнесения объекта класса \texttt{GEO} к классу \texttt{TAG}:
+\begin{equation}
+    \beta = P\bigl(f_\theta(x) = 0 \mid y = 1\bigr)
+           = \frac{\mathrm{FN}}{\mathrm{FN} + \mathrm{TP}}.
+    \label{eq:type-ii}
+\end{equation}
+\end{definition}
+
+Заметим, что $1 - \beta$ есть мощность (power) критерия, совпадающая в
+терминологии классификации с полнотой (recall) для положительного класса.
+
+
+%% ===================================================================
+\subsection{Метрики качества классификации}
+\label{subsec:metrics}
+
+Пусть $\mathcal{C} = \{0, 1\}$ --- множество классов,
+$|\mathcal{C}| = 2$. Для каждого класса $c \in \mathcal{C}$ обозначим
+через $\mathrm{TP}_c$, $\mathrm{FP}_c$, $\mathrm{TN}_c$, $\mathrm{FN}_c$
+элементы матрицы ошибок, построенной в стратегии <<один против всех>>
+(one-vs-rest) для класса $c$.
+
+\begin{definition}[Accuracy]
+\label{def:accuracy}
+Доля правильных ответов (accuracy) классификатора определяется как
+\begin{equation}
+    \mathrm{Acc} = \frac{\mathrm{TP} + \mathrm{TN}}
+                        {\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN}}.
+    \label{eq:accuracy}
+\end{equation}
+\end{definition}
+
+\begin{definition}[Precision]
+\label{def:precision}
+Точность (precision) для класса $c \in \mathcal{C}$ определяется как
+\begin{equation}
+    P_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c}.
+    \label{eq:precision}
+\end{equation}
+Величина $P_c$ характеризует долю истинных представителей класса $c$
+среди всех объектов, отнесённых классификатором к классу $c$.
+\end{definition}
+
+\begin{definition}[Recall]
+\label{def:recall}
+Полнота (recall) для класса $c \in \mathcal{C}$ определяется как
+\begin{equation}
+    R_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c}.
+    \label{eq:recall}
+\end{equation}
+Величина $R_c$ характеризует долю верно распознанных представителей
+класса $c$ среди всех объектов, истинно принадлежащих классу $c$.
+\end{definition}
+
+\begin{definition}[$F_1$-мера]
+\label{def:f1}
+$F_1$-мера для класса $c$ определяется как среднее гармоническое точности
+и полноты:
+\begin{equation}
+    F_{1,c} = \frac{2\,P_c\,R_c}{P_c + R_c}
+            = \frac{2\,\mathrm{TP}_c}{2\,\mathrm{TP}_c + \mathrm{FP}_c + \mathrm{FN}_c}.
+    \label{eq:f1}
+\end{equation}
+\end{definition}
+
+Для обобщения метрик на многоклассовый случай (а также для единообразного
+представления результатов бинарной классификации) используются агрегированные
+варианты $F_1$-меры.
+
+\begin{definition}[Macro $F_1$]
+\label{def:macro-f1}
+Макро-усреднённая $F_1$-мера определяется как среднее арифметическое
+$F_1$-мер по всем классам:
+\begin{equation}
+    F_1^{\mathrm{macro}} = \frac{1}{|\mathcal{C}|}
+        \sum_{c \in \mathcal{C}} F_{1,c}.
+    \label{eq:macro-f1}
+\end{equation}
+Данная метрика придаёт равный вес каждому классу вне зависимости от его
+представленности в выборке.
+\end{definition}
+
+\begin{definition}[Weighted $F_1$]
+\label{def:weighted-f1}
+Взвешенная $F_1$-мера определяется как
+\begin{equation}
+    F_1^{\mathrm{weighted}} = \sum_{c \in \mathcal{C}}
+        \frac{n_c}{N}\,F_{1,c},
+    \label{eq:weighted-f1}
+\end{equation}
+где $n_c = |\{i : y_i = c\}|$ --- число объектов класса $c$ в выборке,
+$N = \sum_{c \in \mathcal{C}} n_c$ --- общий объём выборки.
+Эта метрика учитывает дисбаланс классов.
+\end{definition}
+
+Систематический анализ метрик классификации и их свойств приведён
+в~\cite{sokolova2009systematic}.
+
+
+%% ===================================================================
+\subsection{Низкоранговая адаптация (LoRA)}
+\label{subsec:lora}
+
+Метод низкоранговой адаптации (Low-Rank Adaptation, LoRA)~\cite{hu2022lora}
+позволяет эффективно дообучать предобученные языковые модели, модифицируя лишь
+малую часть параметров.
+
+Пусть $W_0 \in \mathbb{R}^{d \times k}$ --- матрица весов некоторого
+линейного слоя предобученной модели. В процессе полного дообучения
+(full fine-tuning) вычисляется обновление $\Delta W \in \mathbb{R}^{d \times k}$,
+после чего используется матрица $W = W_0 + \Delta W$.
+Количество обучаемых параметров при этом составляет $d \cdot k$.
+
+Ключевая идея LoRA состоит в параметризации обновления через произведение
+двух матриц малого ранга:
+\begin{equation}
+    W = W_0 + \Delta W = W_0 + B\,A,
+    \label{eq:lora-decomposition}
+\end{equation}
+где $B \in \mathbb{R}^{d \times r}$, $A \in \mathbb{R}^{r \times k}$,
+а $r \ll \min(d, k)$ --- ранг адаптации.
+
+\begin{definition}[Низкоранговая адаптация]
+\label{def:lora}
+Низкоранговой адаптацией с рангом $r$ называется замена обновления
+$\Delta W \in \mathbb{R}^{d \times k}$ на произведение
+$\Delta W = B\,A$, где $B \in \mathbb{R}^{d \times r}$,
+$A \in \mathbb{R}^{r \times k}$, при фиксированной исходной матрице $W_0$.
+\end{definition}
+
+Количество обучаемых параметров при использовании LoRA для одного слоя
+составляет
+\begin{equation}
+    r\,(d + k)
+    \label{eq:lora-params}
+\end{equation}
+вместо $d \cdot k$. При $r \ll \min(d, k)$ достигается значительное
+сокращение числа параметров:
+\begin{equation}
+    \frac{r\,(d + k)}{d \cdot k}
+    = r\left(\frac{1}{k} + \frac{1}{d}\right)
+    \ll 1.
+    \label{eq:lora-ratio}
+\end{equation}
+
+Инициализация матриц выполняется следующим образом:
+\begin{equation}
+    A_{ij} \sim \mathcal{N}(0, \sigma^2), \qquad B = \mathbf{0}_{d \times r},
+    \label{eq:lora-init}
+\end{equation}
+что гарантирует $\Delta W = BA = \mathbf{0}$ на момент начала обучения.
+Таким образом, дообучение начинается с исходной предобученной модели без
+внесения начальных возмущений.
+
+Прямой проход через адаптированный слой для входного вектора
+$h \in \mathbb{R}^k$ вычисляется как
+\begin{equation}
+    h' = W_0\,h + \frac{\alpha}{r}\,B\,A\,h,
+    \label{eq:lora-forward}
+\end{equation}
+где $\alpha > 0$ --- масштабирующий гиперпараметр, контролирующий вклад
+адаптации. Множитель $\alpha / r$ обеспечивает стабильность обучения
+при изменении ранга $r$.
+
+
+%% ===================================================================
+\subsection{Статистические критерии сравнения классификаторов}
+\label{subsec:statistical-tests}
+
+Для статистически обоснованного сравнения нескольких классификаторов,
+обученных на одних и тех же данных и оценённых на общей тестовой выборке,
+необходимо применять специализированные критерии, учитывающие зависимость
+предсказаний.
+
+%% -------------------------------------------------------------------
+\subsubsection{Критерий $Q$ Кохрена}
+\label{subsubsec:cochran}
+
+Критерий $Q$ Кохрена~\cite{cochran1950comparison} применяется для проверки
+гипотезы об однородности $k \geqslant 2$ бинарных классификаторов,
+оценённых на одной и той же выборке из $n$ объектов.
+
+Пусть $X_{ij} \in \{0, 1\}$ --- индикатор правильного ответа $j$-го
+классификатора ($j = 1, \ldots, k$) на $i$-м объекте ($i = 1, \ldots, n$).
+Введём обозначения:
+\begin{equation}
+    T_j = \sum_{i=1}^{n} X_{ij}, \qquad
+    R_i = \sum_{j=1}^{k} X_{ij}, \qquad
+    \bar{T} = \frac{1}{k}\sum_{j=1}^{k} T_j.
+    \label{eq:cochran-notation}
+\end{equation}
+Здесь $T_j$ --- количество правильных ответов $j$-го классификатора,
+$R_i$ --- количество классификаторов, давших правильный ответ на $i$-й объект.
+
+\begin{definition}[Нулевая гипотеза критерия Кохрена]
+\label{def:cochran-h0}
+$H_0$: все $k$ классификаторов имеют одинаковую вероятность правильного
+ответа, т.\,е.
+$P(X_{i1} = 1) = P(X_{i2} = 1) = \ldots = P(X_{ik} = 1)$
+для всех $i$.
+\end{definition}
+
+Статистика критерия Кохрена определяется формулой
+\begin{equation}
+    Q = \frac{k(k-1)\displaystyle\sum_{j=1}^{k}(T_j - \bar{T})^{2}}
+             {k\displaystyle\sum_{i=1}^{n}R_i
+              - \displaystyle\sum_{i=1}^{n}R_i^{2}}.
+    \label{eq:cochran-Q}
+\end{equation}
+
+При справедливости $H_0$ и достаточно большом $n$ статистика $Q$ имеет
+асимптотическое распределение хи-квадрат:
+\begin{equation}
+    Q \xrightarrow{d} \chi^{2}(k - 1).
+    \label{eq:cochran-distribution}
+\end{equation}
+
+Гипотеза $H_0$ отвергается при $Q > \chi^{2}_{1-\alpha}(k-1)$, где
+$\chi^{2}_{1-\alpha}(k-1)$ --- $(1-\alpha)$-квантиль распределения
+$\chi^{2}$ с $k-1$ степенями свободы. Отвержение $H_0$ означает, что
+хотя бы один классификатор статистически значимо отличается от остальных
+по доле правильных ответов.
+
+%% -------------------------------------------------------------------
+\subsubsection{Критерий Макнемара}
+\label{subsubsec:mcnemar}
+
+Для попарного сравнения двух классификаторов $A$ и $B$, оценённых на
+одной и той же выборке из $n$ объектов, применяется критерий
+Макнемара~\cite{mcnemar1947note, dietterich1998approximate}.
+
+Построим таблицу сопряжённости $2 \times 2$ по результатам работы
+двух классификаторов:
+\begin{equation}
+    \begin{array}{c|cc}
+          & B \text{ верно} & B \text{ неверно} \\ \hline
+    A \text{ верно}   & n_{11} & n_{10} \\
+    A \text{ неверно} & n_{01} & n_{00}
+    \end{array}
+    \label{eq:mcnemar-table}
+\end{equation}
+где $n_{10}$ --- количество объектов, на которых $A$ ответил верно,
+а $B$ --- неверно; $n_{01}$ --- количество объектов, на которых $B$
+ответил верно, а $A$ --- неверно. Величины $n_{11}$ и $n_{00}$
+(согласованные ответы) не несут информации о различии классификаторов.
+
+\begin{definition}[Нулевая гипотеза критерия Макнемара]
+\label{def:mcnemar-h0}
+$H_0$: вероятности дискордантных исходов равны, т.\,е.
+\begin{equation}
+    P(\text{$A$ верно, $B$ неверно}) = P(\text{$B$ верно, $A$ неверно}).
+    \label{eq:mcnemar-h0}
+\end{equation}
+\end{definition}
+
+При малых значениях $n_{10} + n_{01}$ (что типично для задач с
+ограниченными тестовыми выборками) используется точный биномиальный
+тест. При справедливости $H_0$ случайная величина $n_{10}$ имеет
+биномиальное распределение:
+\begin{equation}
+    n_{10} \sim \mathrm{Bin}\!\left(n_{10} + n_{01},\; \tfrac{1}{2}\right).
+    \label{eq:mcnemar-binom}
+\end{equation}
+$p$-значение вычисляется как вероятность наблюдения столь же или более
+экстремального результата:
+\begin{equation}
+    p = 2\,\min\!\Bigl(
+        P\bigl(X \leqslant n_{10}\bigr),\;
+        P\bigl(X \geqslant n_{10}\bigr)
+    \Bigr),
+    \quad X \sim \mathrm{Bin}\!\left(n_{10}+n_{01},\; \tfrac{1}{2}\right).
+    \label{eq:mcnemar-pvalue}
+\end{equation}
+
+При больших $n_{10} + n_{01}$ может быть использовано асимптотическое
+приближение со статистикой
+\begin{equation}
+    \chi^{2}_{\mathrm{McN}} = \frac{(n_{10} - n_{01})^{2}}{n_{10} + n_{01}},
+    \label{eq:mcnemar-chi2}
+\end{equation}
+имеющей при $H_0$ распределение $\chi^{2}(1)$.
+
+%% -------------------------------------------------------------------
+\subsubsection{Поправка Бонферрони}
+\label{subsubsec:bonferroni}
+
+При проведении $m$ попарных сравнений возникает проблема множественных
+проверок: вероятность хотя бы одного ложноположительного результата
+(family-wise error rate, FWER) возрастает с ростом $m$.
+
+\begin{definition}[FWER]
+\label{def:fwer}
+Групповая вероятность ошибки первого рода определяется как
+\begin{equation}
+    \mathrm{FWER} = P\bigl(\text{хотя бы одно ложное отвержение } H_0\bigr).
+    \label{eq:fwer}
+\end{equation}
+\end{definition}
+
+Поправка Бонферрони~\cite{bonferroni1936teoria} является простейшим
+способом контроля FWER. При проведении $m$ одновременных проверок
+скорректированный уровень значимости каждого отдельного теста полагается
+равным
+\begin{equation}
+    \alpha_{\mathrm{adj}} = \frac{\alpha}{m},
+    \label{eq:bonferroni}
+\end{equation}
+где $\alpha$ --- желаемый уровень FWER. Неравенство Бонферрони
+гарантирует, что
+\begin{equation}
+    \mathrm{FWER} = P\!\left(\bigcup_{i=1}^{m} A_i\right)
+    \leqslant \sum_{i=1}^{m} P(A_i)
+    = m \cdot \alpha_{\mathrm{adj}} = \alpha,
+    \label{eq:bonferroni-proof}
+\end{equation}
+где $A_i$ --- событие ложного отвержения $H_0$ в $i$-м тесте.
+
+В нашем случае при сравнении $k$ классификаторов попарно число
+сравнений составляет $m = \binom{k}{2} = \frac{k(k-1)}{2}$.
+
+
+%% ===================================================================
+\subsection{Бутстрап доверительные интервалы}
+\label{subsec:bootstrap}
+
+Для оценки неопределённости метрик качества классификации применяется
+метод непараметрического бутстрапа~\cite{efron1979bootstrap}, не
+требующий предположений о параметрическом виде распределения метрики.
+
+Пусть $\mathcal{D} = \{(x_i, y_i, \hat{y}_i)\}_{i=1}^{n}$ ---
+тестовая выборка с истинными и предсказанными метками. Пусть
+$\theta = T(\mathcal{D})$ --- значение интересующей метрики
+(например, $F_1$, accuracy), вычисленное на выборке $\mathcal{D}$.
+
+\begin{definition}[Бутстрап-выборка]
+\label{def:bootstrap-sample}
+Бутстрап-выборкой $\mathcal{D}^{*}_b$ ($b = 1, \ldots, B$) называется
+выборка объёма $n$, полученная из $\mathcal{D}$ случайным выбором с
+возвращением:
+\begin{equation}
+    \mathcal{D}^{*}_b = \bigl\{(x_{i_1}, y_{i_1}, \hat{y}_{i_1}),\;
+    \ldots,\; (x_{i_n}, y_{i_n}, \hat{y}_{i_n})\bigr\},
+    \quad i_1, \ldots, i_n \stackrel{\mathrm{iid}}{\sim}
+    \mathrm{Uniform}\{1, \ldots, n\}.
+    \label{eq:bootstrap-sample}
+\end{equation}
+\end{definition}
+
+Алгоритм построения бутстрап доверительного интервала перцентильным
+методом состоит из следующих шагов.
+
+\begin{enumerate}
+    \item Для каждого $b = 1, \ldots, B$ сформировать бутстрап-выборку
+          $\mathcal{D}^{*}_b$ и вычислить
+          $\theta^{*}_b = T(\mathcal{D}^{*}_b)$.
+    \item Упорядочить бутстрап-оценки:
+          $\theta^{*}_{(1)} \leqslant \theta^{*}_{(2)} \leqslant \ldots
+          \leqslant \theta^{*}_{(B)}$.
+    \item Построить доверительный интервал уровня $(1-\alpha)$ как
+\end{enumerate}
+\begin{equation}
+    \mathrm{CI}_{1-\alpha} = \Bigl[\theta^{*}_{(\lfloor B\alpha/2 \rfloor)},\;
+    \theta^{*}_{(\lceil B(1-\alpha/2) \rceil)}\Bigr].
+    \label{eq:bootstrap-ci}
+\end{equation}
+
+В настоящей работе используется $B = 1000$ бутстрап-выборок и уровень
+доверия $1 - \alpha = 0{,}95$, что обеспечивает построение $95\%$
+доверительных интервалов для всех исследуемых метрик.
+
+Обоснование состоятельности перцентильного метода основано на принципе
+подстановки (plug-in principle): эмпирическое распределение
+$\hat{F}_n$ аппроксимирует истинное распределение $F$, а распределение
+$T(\mathcal{D}^{*}) - T(\mathcal{D})$ аппроксимирует распределение
+$T(\mathcal{D}) - \theta$, где $\theta$ --- истинное значение метрики.
+При $n \to \infty$ эта аппроксимация является состоятельной в силу
+теоремы Гливенко--Кантелли.
