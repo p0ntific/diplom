@@ -29,32 +29,6 @@
 \usepackage{siunitx} % для таблиц с единицами измерений
 
 \newcommand{\cd}[1]{\texttt{#1}}
-\newcommand{\inbr}[1]{\left<#1\right>}
-
-% Для названий стоит использовать \textsc{}
-\newcommand{\OCaml}{\textsc{OCaml}}
-\newcommand{\miniKanren}{\textsc{miniKanren}}
-\newcommand{\BibTeX}{\textsc{BibTeX}}
-\newcommand{\vsharp}{\textsc{V$\sharp$}}
-\newcommand{\fsharp}{\textsc{F$\sharp$}}
-\newcommand{\csharp}{\textsc{C$\sharp$}}
-\newcommand{\GitHub}{\textsc{GitHub}}
-\newcommand{\frontend}{\textsc{FRONTEND}}
-\newcommand{\js}{\textsc{JavaScript}}
-\newcommand{\ts}{\textsc{TypeScript}}
-% \newcommand{\next}{\textsc{Next.js}} % conflicts with TeX primitive
-\newcommand{\yandex}{\textsc{Yandex}}
-\newcommand{\seo}{\textsc{SEO}}
-\newcommand{\backend}{\textsc{BACKEND}}
-\newcommand{\json}{\textsc{JSON}}
-\newcommand{\fsd}{\textsc{Feature sliced design}}
-\newcommand{\formik}{\textsc{Formik}}
-\newcommand{\debounce}{\textsc{debounce}}
-\newcommand{\react}{\textsc{React}}
-\newcommand{\css}{\textsc{CSS}}
-\newcommand{\rquery}{\textsc{TanStack Query}}
-\newcommand{\tailwind}{\textsc{Tailwind CSS}}
-\newcommand{\SMT}{\textsc{SMT}}
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -86,6 +60,7 @@
 \usepackage{totcount}
 \usepackage{setspace}
 \usepackage{float} % для [H] размещения таблиц и рисунков
+\emergencystretch=1.5em % даёт LaTeX больше свободы при переносах строк
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{csquotes} % для \enquote
 \usepackage{hyperref}

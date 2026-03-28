@@ -30,8 +30,7 @@ $x_i \in \mathcal{X}$, $y_i \in \mathcal{Y}$.
 
 \begin{definition}[Матрица ошибок]
 \label{def:confusion-matrix}
-Матрицей ошибок (confusion matrix) классификатора $f_\theta$ на выборке
-$\{(x_i, y_i)\}_{i=1}^{n}$ называется набор из четырёх величин:
+Матрицей ошибок (confusion matrix) классификатора $f_\theta$ на выборке $\{(x_i, y_i)\}_{i=1}^{n}$ называется набор из четырёх величин:
 \begin{align}
     \mathrm{TP} &= \bigl|\{i : \hat{y}_i = 1 \;\wedge\; y_i = 1\}\bigr|, \label{eq:tp} \\
     \mathrm{FP} &= \bigl|\{i : \hat{y}_i = 1 \;\wedge\; y_i = 0\}\bigr|, \label{eq:fp} \\

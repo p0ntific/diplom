@@ -48,7 +48,7 @@
     \item \textbf{Дообучение (LoRA).} Адаптация базовой модели YandexGPT Lite методом LoRA~\cite{hu2022lora} через API Yandex Cloud~\cite{yandexgpt2024docs}. На выходе --- дообученная модель с уникальным идентификатором чекпоинта.
     \item \textbf{Инференс на бенчмарке.} Последовательный прогон каждого примера из бенчмарка через модель с фиксированными параметрами генерации. Результат --- XML-разметка с вызовом инструмента.
     \item \textbf{Оценка и конвертация.} Парсинг ответов модели, извлечение имени вызванного инструмента из тегов \texttt{<tool\_call>}, сопоставление с эталонной меткой. Вычисление метрик accuracy, precision, recall, F1 для каждого класса.
-    \item \textbf{Статистический анализ.} Применение непараметрических тестов (Cochran Q, McNemar) и бутстрап-оценок доверительных интервалов для проверки статистической значимости различий между моделями.
+    \item \textbf{Статистический анализ.} Применение непараметрических критериев (Cochran Q, McNemar) и бутстрап-оценок доверительных интервалов для проверки статистической значимости различий между моделями.
 \end{enumerate}
 
 \subsection{Описание бенчмарков} \label{subsec:benchmarks}
@@ -60,12 +60,13 @@
 \caption{Характеристики оценочных бенчмарков.}
 \label{tab:benchmarks}
 \def\arraystretch{1.2}
+\setlength\tabcolsep{0.4em}
 \begin{tabular}{lcccc}
     \toprule
     Бенчмарк & Объём & GEO & TAG & Тип данных \\
     \midrule
-    \texttt{benchmark-combined} & 500 & 326 (65,2\%) & 174 (34,8\%) & Реальные + синтетические \\
-    \texttt{benchmark-real}     & 250 & 203 (81,2\%) & 47 (18,8\%)  & Только реальные \\
+    \texttt{combined} & 500 & 326 (65,2\%) & 174 (34,8\%) & Реал.\,+ синтет. \\
+    \texttt{real}     & 250 & 203 (81,2\%) & 47 (18,8\%)  & Только реальные \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -93,16 +94,17 @@
 \caption{Характеристики обучающих датасетов.}
 \label{tab:datasets}
 \def\arraystretch{1.2}
-\begin{tabular}{lccccc}
+\setlength\tabcolsep{0.35em}
+\begin{tabular}{lclccl}
     \toprule
-    Датасет & Объём & Тип данных & GEO & TAG & Гуманизация \\
+    Датасет & Объём & Тип & GEO & TAG & Гуман. \\
     \midrule
-    \texttt{train-synthetic-50}   & 50  & Синтетические         & 54,0\% & 46,0\% & Да \\
-    \texttt{train-synthetic-250}  & 250 & Синтетические         & 53,6\% & 46,4\% & Да \\
-    \texttt{train-synthetic-500}  & 500 & Синтетические         & 55,8\% & 44,2\% & Да \\
-    \texttt{train-synthetic-1000} & 908 & Синтетические         & 52,0\% & 48,0\% & Да \\
-    \texttt{train-real-250}       & 250 & Реальные              & 82,4\% & 17,6\% & Нет \\
-    \texttt{train-mixed-500}      & 500 & Реальные + синтет.    & 68,0\% & 32,0\% & Нет \\
+    \texttt{synth-50}   & 50  & Синтет.       & 54,0\% & 46,0\% & Да \\
+    \texttt{synth-250}  & 250 & Синтет.       & 53,6\% & 46,4\% & Да \\
+    \texttt{synth-500}  & 500 & Синтет.       & 55,8\% & 44,2\% & Да \\
+    \texttt{synth-1000} & 908 & Синтет.       & 52,0\% & 48,0\% & Да \\
+    \texttt{real-250}   & 250 & Реал.         & 82,4\% & 17,6\% & Нет \\
+    \texttt{mixed-500}  & 500 & Реал.\,+ синт. & 68,0\% & 32,0\% & Нет \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -127,7 +129,7 @@
 \]
 где $W_0$ --- замороженные веса исходной модели.
 
-Yandex Cloud API предоставляет дообучение как управляемый сервис: пользователь загружает обучающий датасет в формате JSONL, указывает базовую модель и запускает задачу обучения. Внутренние гиперпараметры LoRA (ранг $r$, коэффициент масштабирования $\alpha$, learning rate) управляются платформой и не доступны для прямого задания пользователем.
+Yandex Cloud API предоставляет дообучение как управляемый сервис: пользователь загружает обучающий датасет в формате JSONL, указывает базовую модель и запускает задачу обучения. Внутренние гиперпараметры LoRA (ранг $r$, коэффициент масштабирования $\alpha$, learning rate) управляются платформой и недоступны для прямого задания пользователем.
 
 \subsubsection{Базовая модель}
 
@@ -139,7 +141,7 @@ Yandex Cloud API предоставляет дообучение как упра
 \begin{itemize}
     \item \textbf{Temperature}: $0{,}1$ --- низкое значение для обеспечения детерминированности и воспроизводимости ответов;
     \item \textbf{Max tokens}: $4096$ --- верхняя граница длины генерируемого ответа;
-    \item \textbf{Парсинг}: извлечение имени инструмента из XML-тегов \texttt{<tool\_call>} в ответе модели.
+    \item \textbf{Парсинг}: извлечение имени вызванного инструмента из XML-тегов \texttt{<tool\_call>}.
 \end{itemize}
 
 \subsection{Дизайн эксперимента} \label{subsec:design}
@@ -153,22 +155,23 @@ Yandex Cloud API предоставляет дообучение как упра
 \caption{Перечень моделей, участвующих в эксперименте.}
 \label{tab:models}
 \def\arraystretch{1.2}
+\setlength\tabcolsep{0.35em}
 \begin{tabular}{llll}
     \toprule
-    Модель & Базовая архитектура & Обучающий датасет & Объём \\
+    \textbf{Модель} & \textbf{База} & \textbf{Обучающий датасет} & \textbf{Объём} \\
     \midrule
-    \texttt{pro\_baseline}        & YandexGPT 5.1 Pro & --- (без дообучения) & --- \\
-    \texttt{train\_synth\_50}     & YandexGPT Lite    & \texttt{train-synthetic-50}   & 50 \\
-    \texttt{train\_synth\_250}    & YandexGPT Lite    & \texttt{train-synthetic-250}  & 250 \\
-    \texttt{train\_synth\_500}    & YandexGPT Lite    & \texttt{train-synthetic-500}  & 500 \\
-    \texttt{train\_synth\_1000}   & YandexGPT Lite    & \texttt{train-synthetic-1000} & 908 \\
-    \texttt{train\_real\_250}     & YandexGPT Lite    & \texttt{train-real-250}       & 250 \\
-    \texttt{train\_mixed\_500}    & YandexGPT Lite    & \texttt{train-mixed-500}      & 500 \\
-    \texttt{lite\_latest\_v1}     & YandexGPT Lite    & $\sim$1500 синтет.     & $\sim$1500 \\
-    \texttt{lite\_latest\_v2}     & YandexGPT Lite    & $\sim$1500 синтет.     & $\sim$1500 \\
-    \texttt{lite\_latest\_v3}     & YandexGPT Lite    & $\sim$1500 синтет.     & $\sim$1500 \\
-    \texttt{lite\_rc\_v1}         & YandexGPT Lite    & $\sim$1500 синтет.     & $\sim$1500 \\
-    \texttt{lite\_rc\_v2}         & YandexGPT Lite    & $\sim$1500 синтет.     & $\sim$1500 \\
+    \texttt{pro\_baseline}        & GPT~5.1~Pro & --- (без дообучения) & --- \\
+    \texttt{train\_synth\_50}     & GPT~Lite    & \texttt{synth\nobreakdash-50}   & 50 \\
+    \texttt{train\_synth\_250}    & GPT~Lite    & \texttt{synth\nobreakdash-250}  & 250 \\
+    \texttt{train\_synth\_500}    & GPT~Lite    & \texttt{synth\nobreakdash-500}  & 500 \\
+    \texttt{train\_synth\_1000}   & GPT~Lite    & \texttt{synth\nobreakdash-1000} & 908 \\
+    \texttt{train\_real\_250}     & GPT~Lite    & \texttt{real\nobreakdash-250}       & 250 \\
+    \texttt{train\_mixed\_500}    & GPT~Lite    & \texttt{mixed\nobreakdash-500}      & 500 \\
+    \texttt{lite\_latest\_v1}     & GPT~Lite    & ${\sim}$1500 синтет.     & ${\sim}$1500 \\
+    \texttt{lite\_latest\_v2}     & GPT~Lite    & ${\sim}$1500 синтет.     & ${\sim}$1500 \\
+    \texttt{lite\_latest\_v3}     & GPT~Lite    & ${\sim}$1500 синтет.     & ${\sim}$1500 \\
+    \texttt{lite\_rc\_v1}         & GPT~Lite    & ${\sim}$1500 синтет.     & ${\sim}$1500 \\
+    \texttt{lite\_rc\_v2}         & GPT~Lite    & ${\sim}$1500 синтет.     & ${\sim}$1500 \\
     \bottomrule
 \end{tabular}
 \end{table}
