@@ -13,7 +13,6 @@
 \input{preamble.tex}
 
 \begin{document}
-% TODO: Formatting
 \input{title.tex}
 \maketitle
 \setcounter{tocdepth}{2}
@@ -24,7 +23,13 @@
 % \end{abstract}
 
 \pagebreak
-\newfontfamily\myfont{CMU Sans Serif}
+\newfontfamily\myfont{cmun}[
+  Extension=.otf,
+  UprightFont=*ss,
+  ItalicFont=*si,
+  BoldFont=*sx,
+  BoldItalicFont=*so,
+]
 
 
 \input{000_intro}
@@ -36,7 +41,13 @@
 \input{080_implementation}
 \input{090_conclusion}
 
-\setmonofont{CMU Typewriter Text}
+\setmonofont{cmun}[
+  Extension=.otf,
+  UprightFont=*tt,
+  ItalicFont=*it,
+  BoldFont=*tb,
+  BoldItalicFont=*tx,
+]
 \bibliographystyle{ugost2008ls}
 \bibliography{vkr}
 \end{document}

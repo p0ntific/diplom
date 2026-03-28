@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex vkr"] 1774732255.87128 "vkr.aux" "vkr.bbl" "vkr" 1774732258.86761 0
+["bibtex vkr"] 1774733223.38524 "vkr.aux" "vkr.bbl" "vkr" 1774733226.57771 0
   "./ugost2008ls.bst" 1771340983.16685 43109 1ff9efac036b66c7f4bb7c8999e7e194 ""
   "./vkr.bib" 1774725886.87985 7298 a29d8f39f5ef573267257f178db235d7 ""
-  "vkr.aux" 1774732258.3767 32245 d2c4c04c7da93c2803be24c2ecf97575 "xelatex"
+  "vkr.aux" 1774733226.02831 32245 d2c4c04c7da93c2803be24c2ecf97575 "xelatex"
   (generated)
   "vkr.bbl"
   "vkr.blg"
   (rewritten before read)
-["xdvipdfmx"] 1774732258.60825 "vkr.xdv" "vkr.pdf" "vkr" 1774732258.8697 0
-  "vkr.xdv" 1774732258.38028 783228 debd4c3337744a1bb8321683b14bf380 "xelatex"
+["xdvipdfmx"] 1774733226.28693 "vkr.xdv" "vkr.pdf" "vkr" 1774733226.5801 0
+  "vkr.xdv" 1774733226.0321 784556 797e6fe64507917c12a068addb65daaf "xelatex"
   (generated)
   "vkr.pdf"
   (rewritten before read)
-["xelatex"] 1774732255.94664 "vkr.tex" "vkr.xdv" "vkr" 1774732258.86769 0
+["xelatex"] 1774733223.47436 "vkr.tex" "vkr.xdv" "vkr" 1774733226.5778 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -217,7 +217,6 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-xetex.def" 1678741534 13236 13f128194e18a8d116cbf73ccac577bd ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg" 1678741534 26842 05a01d67d23e805520393a049533b8c0 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty" 1678741534 98531 f79ec363f3014ada2cb766715926ecc9 ""
-  "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-NewComputerModern.cfg" 1678227641 18267 6622b1b9c547611ff96325fe686e4920 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg" 1678741534 22906 7a8d9f8766e60f694cdde7648421c2ab ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg" 1678741534 5929 0e1d31c98c10fece90f470d5746ecdd6 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg" 1678741534 5594 45ca1ba048c2fa6267d5419cc463d804 ""
@@ -276,22 +275,22 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1736367900 10850165 9e68ef31572b29fd0db66a7518d729c8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "000_intro.tex" 1774731842.9227 7146 0c8c3144e1240b9172a01a692a3a1a2b ""
-  "010_task.tex" 1774731877.59762 10021 dbf96516ce04020bfed15bd2a14e156c ""
+  "000_intro.tex" 1774733046.85574 7097 ddd92d24158b3d1d138735cd30c70314 ""
+  "010_task.tex" 1774732992.40185 10053 8369bd1057adc1a8ab533061f7e49b67 ""
   "020_related.tex" 1774732063.8493 17982 4c7641948450f6608c30ee647e5fc73d ""
   "030_background.tex" 1774731706.98552 23551 1fddb457422f237fb9f2b154f9ebbbb4 ""
-  "040_method.tex" 1774731942.20114 19220 7ef523cde03677ad4392fa116d29256c ""
-  "050_experiment.tex" 1774730312.76005 27487 f2e097410b4ef1032aa821d377063d91 ""
-  "080_implementation.tex" 1774731959.95227 13494 aac947edb9f4835c7598df5ca37f8171 ""
-  "090_conclusion.tex" 1774732007.01791 9278 031e1b44859e9a0829a38df13ff939fe ""
-  "matmex-diploma-custom.cls" 1774726307.21856 22842 6e1271551dea059c5d784c03b13bef52 ""
+  "040_method.tex" 1774733057.65204 19248 331cf7a6beb97b663f2a774b75912639 ""
+  "050_experiment.tex" 1774733001.75997 27487 99c76626916766aec9816f5fe033cd33 ""
+  "080_implementation.tex" 1774733066.08592 13496 9ff36550c3bd8045b803ad8ac3e6b58a ""
+  "090_conclusion.tex" 1774733029.01435 9388 34866f57bb0fd9591fe5932fee3bf349 ""
+  "matmex-diploma-custom.cls" 1774733184.20314 23100 36e63300255dbe8ad3799bd2141b9546 ""
   "preamble.tex" 1774729944.24092 3318 2aa57cb0f021ac8d7aec5195437edacc ""
   "title.tex" 1774726431.27281 1050 3ae2e851caac4ba2d2ccc16ca0e88a0b ""
-  "vkr.aux" 1774732258.3767 32245 d2c4c04c7da93c2803be24c2ecf97575 "xelatex"
-  "vkr.bbl" 1774732255.94374 7080 78df9e9576b54c94a803073f37b63ad5 "bibtex vkr"
-  "vkr.out" 1774732258.37831 11254 30bcc4414b3e9e51922fc2a51d9645d8 "xelatex"
-  "vkr.tex" 1774722262.50708 982 77e7709d4f69323320870ba6dcbe0d90 ""
-  "vkr.toc" 1774732258.38019 9022 5ea98b9419bda325da023159664e2699 "xelatex"
+  "vkr.aux" 1774733226.02831 32245 d2c4c04c7da93c2803be24c2ecf97575 "xelatex"
+  "vkr.bbl" 1774733223.471 7080 78df9e9576b54c94a803073f37b63ad5 "bibtex vkr"
+  "vkr.out" 1774733226.03014 11254 30bcc4414b3e9e51922fc2a51d9645d8 "xelatex"
+  "vkr.tex" 1774733199.40112 1130 46746890a1aa52d3133daefadbe01bf8 ""
+  "vkr.toc" 1774733226.03202 9022 5ea98b9419bda325da023159664e2699 "xelatex"
   (generated)
   "vkr.aux"
   "vkr.log"

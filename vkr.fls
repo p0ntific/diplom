@@ -459,9 +459,6 @@ OUTPUT vkr.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-NewComputerModern.cfg
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-NewComputerModern.cfg
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-NewComputerModern.cfg
 INPUT ./vkr.out
 INPUT ./vkr.out
 INPUT vkr.out

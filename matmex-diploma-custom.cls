@@ -73,9 +73,27 @@
 %% выбрать Unicode шрифт в котором есть кириллические глифы. Ниже
 %% основным шрифтом выбирается Unicode версия шрифта Computer Modern с заcечками
 \usepackage{fontspec}
-\setmainfont{CMU Serif}
-\setsansfont{CMU Sans Serif}
-\setmonofont{CMU Typewriter Text}
+\setmainfont{cmun}[
+  Extension=.otf,
+  UprightFont=*rm,
+  ItalicFont=*ti,
+  BoldFont=*bx,
+  BoldItalicFont=*bi,
+]
+\setsansfont{cmun}[
+  Extension=.otf,
+  UprightFont=*ss,
+  ItalicFont=*si,
+  BoldFont=*sx,
+  BoldItalicFont=*so,
+]
+\setmonofont{cmun}[
+  Extension=.otf,
+  UprightFont=*tt,
+  ItalicFont=*it,
+  BoldFont=*tb,
+  BoldItalicFont=*tx,
+]
 %\setmonofont{Fira Code}[Contextuals=Alternate,Scale=0.9]
 %\setmonofont{Inconsolata}
 % \newfontfamily\cyrillicfont{CMU Serif}
