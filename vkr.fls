@@ -1,4 +1,4 @@
-PWD /Users/goroshko-av/Desktop/diplom/template
+PWD /Users/goroshko-av/Desktop/diplom/text
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt
@@ -192,6 +192,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT ./vkr.w18
+INPUT ./vkr.w18
+INPUT vkr.w18
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
@@ -447,6 +450,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/totcount/totcount.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/totcount/totcount.sty
+INPUT ./vkr.aex
+INPUT ./vkr.aex
 INPUT ./vkr.aux
 INPUT ./vkr.aux
 INPUT vkr.aux

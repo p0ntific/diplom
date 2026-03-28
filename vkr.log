@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.8)  28 MAR 2026 23:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.8)  29 MAR 2026 00:10
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **vkr.tex
 (./vkr.tex
@@ -674,7 +675,7 @@ LaTeX Info: Redefining \\ on input line 3180.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -699,9 +700,10 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
+runsystem(uname -s > "vkr.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
+ (./vkr.w18)
+runsystem(rm -- "vkr.w18")...executed.
 
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
@@ -733,20 +735,8 @@ Package newfloat Info: float type `listing'=8 on input line 1221.
 Package caption Info: New subtype `sublisting' on input line 1221.
 \c@sublisting=\count347
 )
-runsystem(mkdir -p _minted-vkr)...disabled (restricted).
+runsystem(mkdir -p _minted-vkr)...executed.
 
-
-
-! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138 \usemintedstyle
-                     {bw}
-Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for
- more information.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
@@ -1433,24 +1423,13 @@ ounters
 \c@hypothesis=\count418
 )
 \c@definition=\count419
-runsystem(command -v pygmentize && touch vkr.aex)...disabled (restricted).
+runsystem(command -v pygmentize && touch vkr.aex)...executed.
 
-
-
-! Package minted Error: You must have `pygmentize' installed to use this packag
-e.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \begin{document}
-                     
-Refer to the installation instructions in the minted documentation for more inf
-ormation.
+runsystem(rm vkr.aex)...executed.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
+
 (./vkr.aux)
 \openout1 = `vkr.aux'.
 
@@ -1760,6 +1739,9 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ) [2
 
 ]
+LaTeX Info: Redefining \rmfamily on input line 68.
+LaTeX Info: Redefining \sffamily on input line 68.
+LaTeX Info: Redefining \ttfamily on input line 68.
 LaTeX Info: Redefining \rmfamily on input line 69.
 LaTeX Info: Redefining \sffamily on input line 69.
 LaTeX Info: Redefining \ttfamily on input line 69.
@@ -1826,9 +1808,6 @@ LaTeX Info: Redefining \ttfamily on input line 89.
 LaTeX Info: Redefining \rmfamily on input line 90.
 LaTeX Info: Redefining \sffamily on input line 90.
 LaTeX Info: Redefining \ttfamily on input line 90.
-LaTeX Info: Redefining \rmfamily on input line 91.
-LaTeX Info: Redefining \sffamily on input line 91.
-LaTeX Info: Redefining \ttfamily on input line 91.
 )
 \tf@toc=\write7
 \openout7 = `vkr.toc'.
@@ -1909,32 +1888,21 @@ nput line 15.
 Package hyperref Info: bookmark level for unknown hypothesis defaults to 0 on i
 nput line 38.
  [8] [9])
-(./020_related.tex [10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (2.6926pt too wide) in paragraph at lines 67--68
-[]\TU/CMUSerif(1)/m/n/14.4 Во-первых, архитектура Transformer [[]] и авторегрес
-сионные decoder-
- []
-
-
-Overfull \hbox (4.60942pt too wide) in paragraph at lines 73--74
-[]\TU/CMUSerif(1)/m/n/14.4 , []] является активной областью исследований; работ
-ы Toolformer [[]]
- []
-
-) (./030_background.tex [17] [18] [19] [20] [21] [22] [23] [24] [25] [26])
-(./040_method.tex [27] [28] [29] [30] [31]
-Overfull \hbox (0.45738pt too wide) in paragraph at lines 136--137
+(./020_related.tex [10] [11] [12] [13] [14] [15]) (./030_background.tex
+[16] [17] [18] [19] [20] [21] [22] [23] [24]) (./040_method.tex [25] [26]
+[27] [28] [29]
+Overfull \hbox (0.45738pt too wide) in paragraph at lines 130--131
 []\TU/CMUSerif(1)/m/n/14.4 В качестве базовой модели для дообучения используетс
 я YandexGPT
  []
 
-[32] [33] [34]) (./050_experiment.tex [35] [36] [37] [38] [39]
+[30] [31]) (./050_experiment.tex [32] [33] [34] [35] [36]
 Underfull \hbox (badness 1424) in paragraph at lines 181--182
 []\TU/CMUSerif(1)/m/n/14.4 Модель на синтетике (\TU/CMUTypewriterText(1)/m/n/14
 .4 train_synth_500\TU/CMUSerif(1)/m/n/14.4 ) превосходит модель
  []
 
-[40] [41]
+[37] [38]
 Underfull \hbox (badness 1337) in paragraph at lines 238--239
 \TU/CMUSerif(1)/m/n/14.4 1 ошибка TAG$\OMS/cmsy/m/n/14.4 !$\TU/CMUSerif(1)/m/n/
 14.4 GEO на \TU/CMUTypewriterText(1)/m/n/14.4 benchmark-combined \TU/CMUSerif(1
@@ -1947,7 +1915,7 @@ Underfull \hbox (badness 1609) in paragraph at lines 238--239
 al\TU/CMUSerif(1)/m/n/14.4 . Аналогичная картина наблюдается для
  []
 
-[42] [43]
+[39] [40]
 Underfull \hbox (badness 1348) in paragraph at lines 289--290
 \TU/CMUSerif(1)/b/n/14.4 ции?[] \TU/CMUSerif(1)/m/n/14.4 Дообучение методом LoR
 A приводит к статистически зна-
@@ -1960,7 +1928,7 @@ Underfull \hbox (badness 1655) in paragraph at lines 289--290
  дообученная модель
  []
 
-[44] [45]) (./080_implementation.tex [46
+[41] [42]) (./080_implementation.tex [43
 
 ]
 Underfull \hbox (badness 2302) in paragraph at lines 20--21
@@ -1968,31 +1936,25 @@ Underfull \hbox (badness 2302) in paragraph at lines 20--21
 нали-
  []
 
-[47] [48]
+[44]
 Underfull \hbox (badness 1253) in paragraph at lines 44--45
 []\TU/CMUSerif(1)/m/n/14.4 Генерация синтетических тестовых данных выполняется 
 двумя
  []
 
-[49]) (./090_conclusion.tex [50]
+[45]) (./090_conclusion.tex [46] [47]
 Underfull \hbox (badness 1394) in paragraph at lines 6--7
 \TU/CMUSerif(1)/m/n/14.4 агенте, функционирующем в домене недвижимости. Исследо
 вание
  []
 
-[51]
-Overfull \hbox (1.71182pt too wide) in paragraph at lines 20--21
-\TU/CMUSerif(1)/m/n/14.4 из 250 реальных и 250 синтетических примеров (\TU/CMUT
-ypewriterText(1)/m/n/14.4 train_mixed_500\TU/CMUSerif(1)/m/n/14.4 ),
- []
-
-
+[48]
 Underfull \hbox (badness 2781) in paragraph at lines 25--26
 \TU/CMUSerif(1)/m/n/14.4 задачах классификации. Во-вторых, сформулированы конкр
 етные
  []
 
-[52] [53]) (./vkr.bbl [54]
+[49]) (./vkr.bbl [50]
 LaTeX Info: Redefining \rmfamily on input line 15.
 LaTeX Info: Redefining \sffamily on input line 15.
 LaTeX Info: Redefining \ttfamily on input line 15.
@@ -2035,7 +1997,7 @@ Underfull \hbox (badness 1629) in paragraph at lines 87--91
 reprint
  []
 
-[55]
+[51]
 LaTeX Info: Redefining \rmfamily on input line 93.
 LaTeX Info: Redefining \sffamily on input line 93.
 LaTeX Info: Redefining \ttfamily on input line 93.
@@ -2075,7 +2037,7 @@ LaTeX Info: Redefining \ttfamily on input line 147.
 LaTeX Info: Redefining \rmfamily on input line 154.
 LaTeX Info: Redefining \sffamily on input line 154.
 LaTeX Info: Redefining \ttfamily on input line 154.
-[56]
+[52]
 LaTeX Info: Redefining \rmfamily on input line 163.
 LaTeX Info: Redefining \sffamily on input line 163.
 LaTeX Info: Redefining \ttfamily on input line 163.
@@ -2099,21 +2061,21 @@ Underfull \hbox (badness 3861) in paragraph at lines 184--192
 Package caption Warning: Unused \captionsetup[sub] on input line 68.
 See the caption package documentation for explanation.
 
-[57] (./vkr.aux)
+[53] (./vkr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `vkr.out' has not changed.
-(rerunfilecheck)             Checksum: F61EE968187C939242E5A83E30A9527F;11575.
+(rerunfilecheck)             Checksum: 30BCC4414B3E9E51922FC2A51D9645D8;11254.
  ) 
 Here is how much of TeX's memory you used:
- 45368 strings out of 474773
- 1006140 string characters out of 5757725
+ 45374 strings out of 474773
+ 1006217 string characters out of 5757725
  1933839 words of memory out of 5000000
- 66611 multiletter control sequences out of 15000+600000
+ 66614 multiletter control sequences out of 15000+600000
  569993 words of font info for 180 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,16n,131p,1017b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,16n,131p,1020b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on vkr.xdv (57 pages, 842676 bytes).
+Output written on vkr.xdv (53 pages, 783228 bytes).

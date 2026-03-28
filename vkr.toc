@@ -7,65 +7,64 @@
 \contentsline {subsection}{\numberline {2.4}Критерии успеха}{9}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Ограничения исследования}{10}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Обзор литературы}{11}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Большие языковые модели и Transformer}{11}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Методы дообучения больших языковых моделей}{12}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Гипотеза поверхностного выравнивания}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}AI-агенты и выбор инструментов}{15}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Синтетическая генерация обучающих данных}{16}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Выводы обзора}{17}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Математические основы}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Формализация задачи бинарной классификации}{19}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Метрики качества классификации}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Низкоранговая адаптация (LoRA)}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Статистические критерии сравнения классификаторов}{23}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Критерий $Q$ Кохрена}{23}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Критерий Макнемара}{24}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Поправка Бонферрони}{25}{subsubsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.5}Бутстрап доверительные интервалы}{26}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Методология экспериментов}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Пайплайн дообучения и оценки}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Описание бенчмарков}{29}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Политика разметки пограничных случаев}{30}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}Обучающие датасеты}{30}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Протокол дообучения}{32}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Метод дообучения}{32}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Базовая модель}{32}{subsubsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.3}Конфигурация инференса}{32}{subsubsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.5}Дизайн эксперимента}{33}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Перечень моделей}{33}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Матрица экспериментов}{33}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}Статистические тесты}{34}{subsubsection.5.5.3}%
-\contentsline {subsubsection}{\numberline {5.5.4}Контроль воспроизводимости}{34}{subsubsection.5.5.4}%
-\contentsline {section}{\numberline {6}Результаты экспериментов и их анализ}{36}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Оценка базовой модели}{36}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Основные результаты дообучения}{36}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Валидация на реальных данных}{37}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Анализ кривой обучения}{39}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Анализ типа обучающих данных}{40}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Анализ ошибок}{41}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Паттерны ошибок классификации}{41}{subsubsection.6.6.1}%
-\contentsline {subsubsection}{\numberline {6.6.2}Консервация ошибок}{41}{subsubsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.7}Статистическая значимость}{42}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Критерий Кохрена}{42}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Попарные сравнения (критерий Макнемара)}{42}{subsubsection.6.7.2}%
-\contentsline {paragraph}{\texttt {benchmark-combined}.}{43}{section*.14}%
-\contentsline {paragraph}{\texttt {benchmark-real}.}{43}{section*.15}%
-\contentsline {subsubsection}{\numberline {6.7.3}Согласованность предсказаний}{43}{subsubsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.8}Ответы на исследовательские вопросы}{44}{subsection.6.8}%
-\contentsline {paragraph}{\textsc {RQ1}: Каково влияние дообучения на метрики классификации?}{44}{section*.16}%
-\contentsline {paragraph}{\textsc {RQ2}: Как зависит качество от объёма обучающих данных?}{44}{section*.17}%
-\contentsline {paragraph}{\textsc {RQ3}: Как тип обучающих данных влияет на робастность модели?}{44}{section*.18}%
-\contentsline {paragraph}{\textsc {RQ4}: Статистически значимы ли различия между моделями?}{45}{section*.19}%
-\contentsline {section}{\numberline {7}Программная реализация}{46}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Архитектура системы}{46}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Подсистема статистического анализа}{47}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Подсистема инференса}{48}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Подсистема генерации данных}{49}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Обеспечение качества кода}{49}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Технологический стек}{50}{subsection.7.6}%
-\contentsline {section}{\numberline {8}Заключение}{51}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Направления дальнейших исследований}{53}{subsection.8.1}%
-\contentsline {section}{Список литературы}{55}{section*.21}%
+\contentsline {subsection}{\numberline {3.1}Методы дообучения больших языковых моделей}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Гипотеза поверхностного выравнивания}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}AI-агенты и выбор инструментов}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Синтетическая генерация обучающих данных}{15}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Выводы обзора}{15}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Математические основы}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Формализация задачи бинарной классификации}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Метрики качества классификации}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Низкоранговая адаптация (LoRA)}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Статистические критерии сравнения классификаторов}{21}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Критерий $Q$ Кохрена}{21}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Критерий Макнемара}{22}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Поправка Бонферрони}{23}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}Бутстрап доверительные интервалы}{24}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Методология экспериментов}{26}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Пайплайн дообучения и оценки}{26}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Описание бенчмарков}{27}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Политика разметки пограничных случаев}{28}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}Обучающие датасеты}{28}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Протокол дообучения}{30}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Метод дообучения}{30}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Базовая модель}{30}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Конфигурация инференса}{30}{subsubsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.5}Дизайн эксперимента}{31}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Перечень моделей}{31}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Матрица экспериментов}{31}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Статистические тесты}{31}{subsubsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.4}Контроль воспроизводимости}{32}{subsubsection.5.5.4}%
+\contentsline {section}{\numberline {6}Результаты экспериментов и их анализ}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Оценка базовой модели}{33}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Основные результаты дообучения}{33}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Валидация на реальных данных}{34}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Анализ кривой обучения}{36}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Анализ типа обучающих данных}{37}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Анализ ошибок}{38}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Паттерны ошибок классификации}{38}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Консервация ошибок}{38}{subsubsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.7}Статистическая значимость}{39}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Критерий Кохрена}{39}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Попарные сравнения (критерий Макнемара)}{39}{subsubsection.6.7.2}%
+\contentsline {paragraph}{\texttt {benchmark-combined}.}{40}{section*.14}%
+\contentsline {paragraph}{\texttt {benchmark-real}.}{40}{section*.15}%
+\contentsline {subsubsection}{\numberline {6.7.3}Согласованность предсказаний}{40}{subsubsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.8}Ответы на исследовательские вопросы}{41}{subsection.6.8}%
+\contentsline {paragraph}{\textsc {RQ1}: Каково влияние дообучения на метрики классификации?}{41}{section*.16}%
+\contentsline {paragraph}{\textsc {RQ2}: Как зависит качество от объёма обучающих данных?}{41}{section*.17}%
+\contentsline {paragraph}{\textsc {RQ3}: Как тип обучающих данных влияет на робастность модели?}{41}{section*.18}%
+\contentsline {paragraph}{\textsc {RQ4}: Статистически значимы ли различия между моделями?}{42}{section*.19}%
+\contentsline {section}{\numberline {7}Программная реализация}{43}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Архитектура системы}{43}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Подсистема статистического анализа}{44}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Подсистема инференса}{45}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Подсистема генерации данных}{46}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Обеспечение качества кода}{46}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Технологический стек}{46}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Заключение}{48}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Направления дальнейших исследований}{50}{subsection.8.1}%
+\contentsline {section}{Список литературы}{51}{section*.21}%
 \selectlanguage *[]{english}
 \selectlanguage *[]{english}
 \selectlanguage *[]{english}
