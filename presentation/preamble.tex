@@ -1,0 +1,53 @@
+
+%%% Обязательные пакеты
+%% Beamer
+\usepackage{beamerthemesplit}
+\usetheme{SPbGU}
+\beamertemplatenavigationsymbolsempty
+\usepackage{appendixnumberbeamer}
+
+%% Локализация
+\usepackage{fontspec}
+\setmainfont{PT Serif}
+\setsansfont{Helvetica}
+\setmonofont{Menlo}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily\russianfont{PT Serif}
+\newfontfamily\russianfontsf{Helvetica}
+\newfontfamily\russianfonttt{Menlo}
+\usepackage[autostyle]{csquotes}
+
+%% Графика
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%% Математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+
+% Математические окружения с русским названием
+\newtheorem{rutheorem}{Теорема}
+\newtheorem{ruproof}{Доказательство}
+\newtheorem{rudefinition}{Определение}
+\newtheorem{rulemma}{Лемма}
+
+
+%%% Дополнительные пакеты
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,calc,shapes,positioning,tikzmark,patterns}
+
+\usepackage{multirow}
+
+%% Пакеты для оформления алгоритмов на псевдокоде
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+
+\usepackage{fancyvrb}
+
+%% Пакет для анимированных иллюстраций
+\usepackage{animate}

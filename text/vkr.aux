@@ -1,0 +1,446 @@
+\relax 
+\ProvideDocumentCommand \selectlanguage {sO{}m}{}
+\catcode `"\active 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\citation{schick2023toolformer}
+\citation{patil2023gorilla}
+\citation{qin2024toollearning}
+\citation{yandexgpt2024docs}
+\citation{zhou2023lima}
+\citation{gudibande2023false}
+\citation{hu2022lora}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Введение}{4}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Постановка задачи}{7}{section.2}\protected@file@percent }
+\newlabel{sec:task}{{2}{7}{Постановка задачи}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Формальная постановка}{7}{subsection.2.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~1\else \numberline {1}Определение\fi }{7}{definition.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~2\else \numberline {2}Определение\fi }{7}{definition.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~3\else \numberline {3}Определение\fi }{8}{definition.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Гипотезы исследования}{8}{subsection.2.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {hypothesis}{\ifthmt@listswap Гипотеза~1\else \numberline {1}Гипотеза\fi }{8}{hypothesis.1}\protected@file@percent }
+\newlabel{hyp:lora_significance}{{1}{8}{}{hypothesis.1}{}}
+\@writefile{loe}{\contentsline {hypothesis}{\ifthmt@listswap Гипотеза~2\else \numberline {2}Гипотеза\fi }{8}{hypothesis.2}\protected@file@percent }
+\newlabel{hyp:lora_threshold}{{2}{8}{}{hypothesis.2}{}}
+\@writefile{loe}{\contentsline {hypothesis}{\ifthmt@listswap Гипотеза~3\else \numberline {3}Гипотеза\fi }{8}{hypothesis.3}\protected@file@percent }
+\newlabel{hyp:data_quality}{{3}{8}{}{hypothesis.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Исследовательские вопросы}{9}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Критерии успеха}{9}{subsection.2.4}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Критерии успеха: baseline-метрики базовой модели и целевые значения}}{10}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:success_criteria}{{1}{10}{Критерии успеха: baseline-метрики базовой модели и целевые значения}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Ограничения исследования}{10}{subsection.2.5}\protected@file@percent }
+\citation{yandexgpt2024docs}
+\citation{vaswani2017attention}
+\citation{radford2019language}
+\citation{kirkpatrick2017overcoming}
+\citation{ding2023parameter}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Обзор литературы}{12}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{12}{Обзор литературы}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Методы дообучения больших языковых моделей}{12}{subsection.3.1}\protected@file@percent }
+\citation{hu2022lora}
+\citation{lester2021power}
+\citation{houlsby2019parameter}
+\citation{zhou2023lima}
+\citation{ouyang2022instructgpt}
+\citation{gudibande2023false}
+\citation{gudibande2023false}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Гипотеза поверхностного выравнивания}{13}{subsection.3.2}\protected@file@percent }
+\citation{xi2023rise}
+\citation{yao2023react}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}AI-агенты и выбор инструментов}{14}{subsection.3.3}\protected@file@percent }
+\citation{schick2023toolformer}
+\citation{patil2023gorilla}
+\citation{wang2023selfinstruct}
+\citation{qin2024toollearning}
+\citation{bfcl2024}
+\citation{qin2023toolllm}
+\citation{li2023apibank}
+\citation{wang2023selfinstruct}
+\citation{wang2023selfinstruct}
+\citation{zhou2023lima}
+\citation{patil2023gorilla}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Синтетическая генерация обучающих данных}{16}{subsection.3.4}\protected@file@percent }
+\citation{hu2022lora}
+\citation{ding2023parameter}
+\citation{zhou2023lima}
+\citation{gudibande2023false}
+\citation{schick2023toolformer}
+\citation{patil2023gorilla}
+\citation{xi2023rise}
+\citation{qin2024toollearning}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Выводы обзора}{17}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Математические основы}{18}{section.4}\protected@file@percent }
+\newlabel{sec:background}{{4}{18}{Математические основы}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Формализация задачи бинарной классификации}{18}{subsection.4.1}\protected@file@percent }
+\newlabel{subsec:binary-classification}{{4.1}{18}{Формализация задачи бинарной классификации}{subsection.4.1}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~4\else \numberline {4}Определение\fi \thmtformatoptarg {Классификатор}}{18}{definition.4}\protected@file@percent }
+\newlabel{def:classifier}{{4}{18}{Классификатор}{definition.4}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~5\else \numberline {5}Определение\fi \thmtformatoptarg {Матрица ошибок}}{18}{definition.5}\protected@file@percent }
+\newlabel{def:confusion-matrix}{{5}{18}{Матрица ошибок}{definition.5}{}}
+\newlabel{eq:tp}{{1}{18}{Матрица ошибок}{equation.4.1}{}}
+\newlabel{eq:fp}{{2}{18}{Матрица ошибок}{equation.4.2}{}}
+\newlabel{eq:tn}{{3}{18}{Матрица ошибок}{equation.4.3}{}}
+\newlabel{eq:fn}{{4}{18}{Матрица ошибок}{equation.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Метрики качества классификации}{19}{subsection.4.2}\protected@file@percent }
+\newlabel{subsec:metrics}{{4.2}{19}{Метрики качества классификации}{subsection.4.2}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~6\else \numberline {6}Определение\fi \thmtformatoptarg {Accuracy}}{19}{definition.6}\protected@file@percent }
+\newlabel{def:accuracy}{{6}{19}{Accuracy}{definition.6}{}}
+\newlabel{eq:accuracy}{{5}{19}{Accuracy}{equation.4.5}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~7\else \numberline {7}Определение\fi \thmtformatoptarg {Precision}}{19}{definition.7}\protected@file@percent }
+\newlabel{def:precision}{{7}{19}{Precision}{definition.7}{}}
+\newlabel{eq:precision}{{6}{19}{Precision}{equation.4.6}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~8\else \numberline {8}Определение\fi \thmtformatoptarg {Recall}}{19}{definition.8}\protected@file@percent }
+\newlabel{def:recall}{{8}{19}{Recall}{definition.8}{}}
+\newlabel{eq:recall}{{7}{19}{Recall}{equation.4.7}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~9\else \numberline {9}Определение\fi \thmtformatoptarg {$F_1$-мера}}{19}{definition.9}\protected@file@percent }
+\newlabel{def:f1}{{9}{19}{$F_1$-мера}{definition.9}{}}
+\newlabel{eq:f1}{{8}{19}{$F_1$-мера}{equation.4.8}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~10\else \numberline {10}Определение\fi \thmtformatoptarg {Macro $F_1$}}{19}{definition.10}\protected@file@percent }
+\newlabel{def:macro-f1}{{10}{19}{Macro $F_1$}{definition.10}{}}
+\newlabel{eq:macro-f1}{{9}{19}{Macro $F_1$}{equation.4.9}{}}
+\citation{sokolova2009systematic}
+\citation{hu2022lora}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~11\else \numberline {11}Определение\fi \thmtformatoptarg {Weighted $F_1$}}{20}{definition.11}\protected@file@percent }
+\newlabel{def:weighted-f1}{{11}{20}{Weighted $F_1$}{definition.11}{}}
+\newlabel{eq:weighted-f1}{{10}{20}{Weighted $F_1$}{equation.4.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Низкоранговая адаптация (LoRA)}{20}{subsection.4.3}\protected@file@percent }
+\newlabel{subsec:lora}{{4.3}{20}{Низкоранговая адаптация (LoRA)}{subsection.4.3}{}}
+\newlabel{eq:lora-decomposition}{{11}{20}{Низкоранговая адаптация (LoRA)}{equation.4.11}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~12\else \numberline {12}Определение\fi \thmtformatoptarg {Низкоранговая адаптация}}{20}{definition.12}\protected@file@percent }
+\newlabel{def:lora}{{12}{20}{Низкоранговая адаптация}{definition.12}{}}
+\citation{cochran1950comparison}
+\newlabel{eq:lora-params}{{12}{21}{Низкоранговая адаптация (LoRA)}{equation.4.12}{}}
+\newlabel{eq:lora-ratio}{{13}{21}{Низкоранговая адаптация (LoRA)}{equation.4.13}{}}
+\newlabel{eq:lora-init}{{14}{21}{Низкоранговая адаптация (LoRA)}{equation.4.14}{}}
+\newlabel{eq:lora-forward}{{15}{21}{Низкоранговая адаптация (LoRA)}{equation.4.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Статистические критерии сравнения классификаторов}{21}{subsection.4.4}\protected@file@percent }
+\newlabel{subsec:statistical-tests}{{4.4}{21}{Статистические критерии сравнения классификаторов}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Критерий $Q$ Кохрена}{21}{subsubsection.4.4.1}\protected@file@percent }
+\newlabel{subsubsec:cochran}{{4.4.1}{21}{Критерий $Q$ Кохрена}{subsubsection.4.4.1}{}}
+\citation{mcnemar1947note}
+\citation{dietterich1998approximate}
+\newlabel{eq:cochran-notation}{{16}{22}{Критерий $Q$ Кохрена}{equation.4.16}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~13\else \numberline {13}Определение\fi \thmtformatoptarg {Нулевая гипотеза критерия Кохрена}}{22}{definition.13}\protected@file@percent }
+\newlabel{def:cochran-h0}{{13}{22}{Нулевая гипотеза критерия Кохрена}{definition.13}{}}
+\newlabel{eq:cochran-Q}{{17}{22}{Критерий $Q$ Кохрена}{equation.4.17}{}}
+\newlabel{eq:cochran-distribution}{{18}{22}{Критерий $Q$ Кохрена}{equation.4.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Критерий Макнемара}{22}{subsubsection.4.4.2}\protected@file@percent }
+\newlabel{subsubsec:mcnemar}{{4.4.2}{22}{Критерий Макнемара}{subsubsection.4.4.2}{}}
+\newlabel{eq:mcnemar-table}{{19}{23}{Критерий Макнемара}{equation.4.19}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~14\else \numberline {14}Определение\fi \thmtformatoptarg {Нулевая гипотеза критерия Макнемара}}{23}{definition.14}\protected@file@percent }
+\newlabel{def:mcnemar-h0}{{14}{23}{Нулевая гипотеза критерия Макнемара}{definition.14}{}}
+\newlabel{eq:mcnemar-h0}{{20}{23}{Нулевая гипотеза критерия Макнемара}{equation.4.20}{}}
+\newlabel{eq:mcnemar-binom}{{21}{23}{Критерий Макнемара}{equation.4.21}{}}
+\newlabel{eq:mcnemar-pvalue}{{22}{23}{Критерий Макнемара}{equation.4.22}{}}
+\newlabel{eq:mcnemar-chi2}{{23}{23}{Критерий Макнемара}{equation.4.23}{}}
+\citation{bonferroni1936teoria}
+\citation{dunn1961multiple}
+\citation{holm1979simple}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Поправка Бонферрони}{24}{subsubsection.4.4.3}\protected@file@percent }
+\newlabel{subsubsec:bonferroni}{{4.4.3}{24}{Поправка Бонферрони}{subsubsection.4.4.3}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~15\else \numberline {15}Определение\fi \thmtformatoptarg {FWER}}{24}{definition.15}\protected@file@percent }
+\newlabel{def:fwer}{{15}{24}{FWER}{definition.15}{}}
+\newlabel{eq:fwer}{{24}{24}{FWER}{equation.4.24}{}}
+\newlabel{eq:bonferroni}{{25}{24}{Поправка Бонферрони}{equation.4.25}{}}
+\newlabel{eq:bonferroni-proof}{{26}{24}{Поправка Бонферрони}{equation.4.26}{}}
+\citation{efron1979bootstrap}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Бутстрап доверительные интервалы}{25}{subsection.4.5}\protected@file@percent }
+\newlabel{subsec:bootstrap}{{4.5}{25}{Бутстрап доверительные интервалы}{subsection.4.5}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Определение~16\else \numberline {16}Определение\fi \thmtformatoptarg {Бутстрап-выборка}}{25}{definition.16}\protected@file@percent }
+\newlabel{def:bootstrap-sample}{{16}{25}{Бутстрап-выборка}{definition.16}{}}
+\newlabel{eq:bootstrap-sample}{{27}{25}{Бутстрап-выборка}{equation.4.27}{}}
+\newlabel{eq:bootstrap-ci}{{28}{25}{Бутстрап доверительные интервалы}{equation.4.28}{}}
+\citation{glivenko1933sulla}
+\citation{cantelli1933sulla}
+\citation{bickel1981asymptotic}
+\citation{efron1993bootstrap}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Методология экспериментов}{27}{section.5}\protected@file@percent }
+\newlabel{sec:method}{{5}{27}{Методология экспериментов}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Пайплайн дообучения и оценки}{27}{subsection.5.1}\protected@file@percent }
+\newlabel{subsec:pipeline}{{5.1}{27}{Пайплайн дообучения и оценки}{subsection.5.1}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Пайплайн дообучения и оценки моделей.}}{27}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{27}{Пайплайн дообучения и оценки моделей}{figure.caption.3}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Дизайн эксперимента: 12~моделей, 2~бенчмарка, 24~цикла оценки; статистический анализ через критерии Кохрена~$Q$, Макнемара (с поправкой Бонферрони) и bootstrap-CI.}}{27}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:experiment_design}{{2}{27}{Дизайн эксперимента: 12~моделей, 2~бенчмарка, 24~цикла оценки; статистический анализ через критерии Кохрена~$Q$, Макнемара (с поправкой Бонферрони) и bootstrap-CI}{figure.caption.4}{}}
+\citation{wang2023selfinstruct}
+\citation{hu2022lora}
+\citation{yandexgpt2024docs}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Описание бенчмарков}{28}{subsection.5.2}\protected@file@percent }
+\newlabel{subsec:benchmarks}{{5.2}{28}{Описание бенчмарков}{subsection.5.2}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Характеристики оценочных бенчмарков.}}{29}{table.caption.5}\protected@file@percent }
+\newlabel{tab:benchmarks}{{2}{29}{Характеристики оценочных бенчмарков}{table.caption.5}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Состав и классовый баланс оценочных бенчмарков.}}{29}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:benchmark_composition}{{3}{29}{Состав и классовый баланс оценочных бенчмарков}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Политика разметки пограничных случаев}{30}{subsubsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Сбор реальных данных и контроль утечек}{30}{subsubsection.5.2.2}\protected@file@percent }
+\newlabel{subsubsec:data_collection}{{5.2.2}{30}{Сбор реальных данных и контроль утечек}{subsubsection.5.2.2}{}}
+\citation{wang2023selfinstruct}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Обучающие датасеты}{31}{subsection.5.3}\protected@file@percent }
+\newlabel{subsec:datasets}{{5.3}{31}{Обучающие датасеты}{subsection.5.3}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Характеристики обучающих датасетов.}}{31}{table.caption.7}\protected@file@percent }
+\newlabel{tab:datasets}{{3}{31}{Характеристики обучающих датасетов}{table.caption.7}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Объёмы и классовый состав обучающих датасетов.}}{32}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:training_sets}{{4}{32}{Объёмы и классовый состав обучающих датасетов}{figure.caption.8}{}}
+\citation{hu2022lora}
+\citation{yandexgpt2024docs}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Протокол дообучения}{33}{subsection.5.4}\protected@file@percent }
+\newlabel{subsec:training}{{5.4}{33}{Протокол дообучения}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Метод дообучения}{33}{subsubsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Базовая модель}{33}{subsubsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3}Конфигурация инференса}{33}{subsubsection.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Дизайн эксперимента}{34}{subsection.5.5}\protected@file@percent }
+\newlabel{subsec:design}{{5.5}{34}{Дизайн эксперимента}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Перечень моделей}{34}{subsubsection.5.5.1}\protected@file@percent }
+\citation{cochran1950comparison}
+\citation{mcnemar1947note}
+\citation{bonferroni1936teoria}
+\citation{dunn1961multiple}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Перечень моделей, участвующих в эксперименте.}}{35}{table.caption.9}\protected@file@percent }
+\newlabel{tab:models}{{4}{35}{Перечень моделей, участвующих в эксперименте}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}Матрица экспериментов}{35}{subsubsection.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.3}Статистические тесты}{35}{subsubsection.5.5.3}\protected@file@percent }
+\newlabel{subsubsec:stat_tests}{{5.5.3}{35}{Статистические тесты}{subsubsection.5.5.3}{}}
+\citation{efron1979bootstrap}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.4}Контроль воспроизводимости}{36}{subsubsection.5.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Результаты экспериментов и их анализ}{37}{section.6}\protected@file@percent }
+\newlabel{sec:experiment}{{6}{37}{Результаты экспериментов и их анализ}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Оценка базовой модели}{37}{subsection.6.1}\protected@file@percent }
+\newlabel{subsec:baseline}{{6.1}{37}{Оценка базовой модели}{subsection.6.1}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Метрики базовой модели \texttt  {pro\_baseline} на двух бенчмарках. 95\%~bootstrap-CI для accuracy построен перцентильным методом ($B = 1000$, $\mathrm  {seed} = 42$).}}{37}{table.caption.10}\protected@file@percent }
+\newlabel{tab:baseline_results}{{5}{37}{Метрики базовой модели \texttt {pro\_baseline} на двух бенчмарках. 95\%~bootstrap-CI для accuracy построен перцентильным методом ($B = 1000$, $\mathrm {seed} = 42$)}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Основные результаты дообучения}{38}{subsection.6.2}\protected@file@percent }
+\newlabel{subsec:main_results}{{6.2}{38}{Основные результаты дообучения}{subsection.6.2}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Результаты на \texttt  {benchmark-combined} (500 примеров: 326~GEO / 174~TAG). 95\%~bootstrap-CI для accuracy построен перцентильным методом ($B = 1000$, $\mathrm  {seed} = 42$); $\rho _\varnothing $~--- доля ответов без \texttt  {tool\_call}.}}{38}{table.caption.11}\protected@file@percent }
+\newlabel{tab:combined_results}{{6}{38}{Результаты на \texttt {benchmark-combined} (500 примеров: 326~GEO / 174~TAG). 95\%~bootstrap-CI для accuracy построен перцентильным методом ($B = 1000$, $\mathrm {seed} = 42$); $\rho _\varnothing $~--- доля ответов без \texttt {tool\_call}}{table.caption.11}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Accuracy всех 12~моделей на \texttt  {benchmark-combined} с 95\%~bootstrap-доверительными интервалами. Горизонтальная линия~--- целевое значение~$0{,}9$.}}{38}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:accuracy_ci}{{5}{38}{Accuracy всех 12~моделей на \texttt {benchmark-combined} с 95\%~bootstrap-доверительными интервалами. Горизонтальная линия~--- целевое значение~$0{,}9$}{figure.caption.12}{}}
+\citation{zhou2023lima}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Валидация на реальных данных}{39}{subsection.6.3}\protected@file@percent }
+\newlabel{subsec:real_validation}{{6.3}{39}{Валидация на реальных данных}{subsection.6.3}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Результаты на \texttt  {benchmark-real} (250 примеров: 203~GEO / 47~TAG). 95\%~bootstrap-CI~--- перцентильный метод, $B = 1000$, $\mathrm  {seed} = 42$; $\rho _\varnothing $~--- доля ответов без \texttt  {tool\_call}; $\Delta $Acc~--- разность с \texttt  {benchmark-combined}.}}{40}{table.caption.13}\protected@file@percent }
+\newlabel{tab:real_results}{{7}{40}{Результаты на \texttt {benchmark-real} (250 примеров: 203~GEO / 47~TAG). 95\%~bootstrap-CI~--- перцентильный метод, $B = 1000$, $\mathrm {seed} = 42$; $\rho _\varnothing $~--- доля ответов без \texttt {tool\_call}; $\Delta $Acc~--- разность с \texttt {benchmark-combined}}{table.caption.13}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Обобщающий разрыв: $\Delta $\,accuracy при переходе с \texttt  {benchmark-combined} на \texttt  {benchmark-real}. Отрицательные значения~--- деградация на реальных данных.}}{41}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:generalization_gap}{{6}{41}{Обобщающий разрыв: $\Delta $\,accuracy при переходе с \texttt {benchmark-combined} на \texttt {benchmark-real}. Отрицательные значения~--- деградация на реальных данных}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Анализ кривой обучения}{41}{subsection.6.4}\protected@file@percent }
+\newlabel{subsec:learning_curve}{{6.4}{41}{Анализ кривой обучения}{subsection.6.4}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Кривая обучения: зависимость метрик от объёма синтетических данных на \texttt  {benchmark-combined}. 95\%~bootstrap-CI ($B = 1000$, $\mathrm  {seed} = 42$, перцентильный метод).}}{41}{table.caption.15}\protected@file@percent }
+\newlabel{tab:learning_curve}{{8}{41}{Кривая обучения: зависимость метрик от объёма синтетических данных на \texttt {benchmark-combined}. 95\%~bootstrap-CI ($B = 1000$, $\mathrm {seed} = 42$, перцентильный метод)}{table.caption.15}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Кривая обучения: зависимость accuracy и Macro~$F_1$ от объёма синтетических обучающих данных на \texttt  {benchmark-combined}.}}{43}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:saturation_curve}{{7}{43}{Кривая обучения: зависимость accuracy и Macro~$F_1$ от объёма синтетических обучающих данных на \texttt {benchmark-combined}}{figure.caption.16}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Confusion matrix модели \texttt  {train\_synth\_50} на \texttt  {benchmark-combined}. Строки~--- истинный класс, столбцы~--- предсказание модели; $n_{\varnothing }$~--- количество ответов без \texttt  {tool\_call}.}}{43}{table.caption.17}\protected@file@percent }
+\newlabel{tab:confusion_synth50}{{9}{43}{Confusion matrix модели \texttt {train\_synth\_50} на \texttt {benchmark-combined}. Строки~--- истинный класс, столбцы~--- предсказание модели; $n_{\varnothing }$~--- количество ответов без \texttt {tool\_call}}{table.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Анализ типа обучающих данных}{43}{subsection.6.5}\protected@file@percent }
+\newlabel{subsec:data_type}{{6.5}{43}{Анализ типа обучающих данных}{subsection.6.5}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Сравнение моделей по типу обучающих данных}}{44}{table.caption.18}\protected@file@percent }
+\newlabel{tab:data_type_comparison}{{10}{44}{Сравнение моделей по типу обучающих данных}{table.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Анализ ошибок}{44}{subsection.6.6}\protected@file@percent }
+\newlabel{subsec:error_analysis}{{6.6}{44}{Анализ ошибок}{subsection.6.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1}Паттерны ошибок классификации}{44}{subsubsection.6.6.1}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Паттерны ошибок классификации на \texttt  {benchmark-combined}}}{45}{table.caption.19}\protected@file@percent }
+\newlabel{tab:error_patterns}{{11}{45}{Паттерны ошибок классификации на \texttt {benchmark-combined}}{table.caption.19}{}}
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Количество ошибок по моделям с разбиением по направлению (GEO$\to $TAG, TAG$\to $GEO, отказ) на обоих бенчмарках.}}{45}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:per_model_errors}{{8}{45}{Количество ошибок по моделям с разбиением по направлению (GEO$\to $TAG, TAG$\to $GEO, отказ) на обоих бенчмарках}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2}Консервация ошибок}{46}{subsubsection.6.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Воспроизводимость между бенчмарками.}{46}{section*.21}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Консервация ошибок: совпадение ошибок на двух бенчмарках (combined\,/\,real)}}{46}{table.caption.22}\protected@file@percent }
+\newlabel{tab:error_conservation}{{12}{46}{Консервация ошибок: совпадение ошибок на двух бенчмарках (combined\,/\,real)}{table.caption.22}{}}
+\@writefile{toc}{\contentsline {paragraph}{Распределение ошибок по 12 моделям.}{46}{section*.23}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Распределение примеров \texttt  {benchmark-combined} по числу ошибающихся моделей}}{47}{table.caption.24}\protected@file@percent }
+\newlabel{tab:error_distribution}{{13}{47}{Распределение примеров \texttt {benchmark-combined} по числу ошибающихся моделей}{table.caption.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{Пересечение ошибочных множеств между моделями.}{47}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Лингвистический анализ <<трудного ядра>>.}{47}{section*.26}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Примеры <<трудного ядра>>: запросы, ошибочные у $\geqslant 9$ моделей из~12}}{48}{table.caption.27}\protected@file@percent }
+\newlabel{tab:hard_examples}{{14}{48}{Примеры <<трудного ядра>>: запросы, ошибочные у $\geqslant 9$ моделей из~12}{table.caption.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Статистическая значимость}{49}{subsection.6.7}\protected@file@percent }
+\newlabel{subsec:significance}{{6.7}{49}{Статистическая значимость}{subsection.6.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.1}Критерий Кохрена}{49}{subsubsection.6.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.2}Попарные сравнения (критерий Макнемара)}{49}{subsubsection.6.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\texttt  {benchmark-combined}.}{49}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\texttt  {benchmark-real}.}{50}{section*.29}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Тепловая карта $p$-значений попарного критерия Макнемара для 12~моделей на \texttt  {benchmark-combined}. Тёмные ячейки~--- значимые различия ($p < \alpha _{\mathrm  {adj}}$), светлые~--- неразличимые пары.}}{50}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:mcnemar_heatmap}{{9}{50}{Тепловая карта $p$-значений попарного критерия Макнемара для 12~моделей на \texttt {benchmark-combined}. Тёмные ячейки~--- значимые различия ($p < \alpha _{\mathrm {adj}}$), светлые~--- неразличимые пары}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.3}Согласованность предсказаний}{51}{subsubsection.6.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Ответы на исследовательские вопросы}{51}{subsection.6.8}\protected@file@percent }
+\newlabel{subsec:rq_answers}{{6.8}{51}{Ответы на исследовательские вопросы}{subsection.6.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {RQ1}: Каково влияние дообучения на метрики классификации?}{51}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {RQ2}: Как зависит качество от объёма обучающих данных?}{51}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {RQ3}: Как тип обучающих данных влияет на робастность модели?}{52}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {RQ4}: Статистически значимы ли различия между моделями?}{52}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Проверка гипотез H1a и H1b.}{52}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Угрозы валидности}{53}{section.7}\protected@file@percent }
+\newlabel{sec:threats}{{7}{53}{Угрозы валидности}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Внутренняя валидность}{53}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Внешняя валидность}{54}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Конструктная валидность}{54}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Статистическая валидность}{55}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Программная реализация}{56}{section.8}\protected@file@percent }
+\newlabel{sec:implementation}{{8}{56}{Программная реализация}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Архитектура системы}{56}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Подсистема статистического анализа}{57}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Подсистема инференса}{58}{subsection.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Подсистема генерации данных}{59}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Обеспечение качества кода}{59}{subsection.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Технологический стек}{59}{subsection.8.6}\protected@file@percent }
+\@writefile{lof}{\setforeignlanguage {russian}}
+\@writefile{lot}{\setforeignlanguage {russian}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Технологический стек проекта}}{60}{table.caption.36}\protected@file@percent }
+\newlabel{tab:tech_stack}{{15}{60}{Технологический стек проекта}{table.caption.36}{}}
+\citation{hu2022lora}
+\citation{zhou2023lima}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Заключение}{61}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{61}{Заключение}{section.9}{}}
+\citation{goroshko2025otchet}
+\citation{lester2021power}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Направления дальнейших исследований}{63}{subsection.9.1}\protected@file@percent }
+\bibstyle{ugost2008ls}
+\bibdata{vkr}
+\bibcite{li2023apibank}{1}
+\bibcite{vaswani2017attention}{2}
+\bibcite{bfcl2024}{3}
+\bibcite{bickel1981asymptotic}{4}
+\bibcite{bonferroni1936teoria}{5}
+\bibcite{cantelli1933sulla}{6}
+\bibcite{cochran1950comparison}{7}
+\bibcite{dietterich1998approximate}{8}
+\bibcite{dunn1961multiple}{9}
+\bibcite{efron1979bootstrap}{10}
+\@writefile{toc}{\contentsline {section}{Список литературы}{65}{section*.37}\protected@file@percent }
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\bibcite{efron1993bootstrap}{11}
+\bibcite{gudibande2023false}{12}
+\bibcite{glivenko1933sulla}{13}
+\bibcite{patil2023gorilla}{14}
+\bibcite{holm1979simple}{15}
+\bibcite{zhou2023lima}{16}
+\bibcite{radford2019language}{17}
+\bibcite{lester2021power}{18}
+\bibcite{hu2022lora}{19}
+\bibcite{mcnemar1947note}{20}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\bibcite{kirkpatrick2017overcoming}{21}
+\bibcite{ding2023parameter}{22}
+\bibcite{houlsby2019parameter}{23}
+\bibcite{yao2023react}{24}
+\bibcite{xi2023rise}{25}
+\bibcite{wang2023selfinstruct}{26}
+\bibcite{sokolova2009systematic}{27}
+\bibcite{qin2024toollearning}{28}
+\bibcite{qin2023toolllm}{29}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\bibcite{schick2023toolformer}{30}
+\bibcite{ouyang2022instructgpt}{31}
+\bibcite{yandexgpt2024docs}{32}
+\bibcite{goroshko2025otchet}{33}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{english}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\@writefile{toc}{\selectlanguage *[]{russian}}
+\gdef \@abspage@last{68}

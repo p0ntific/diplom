@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: vkr.aux
+The style file: ugost2008ls.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: vkr.bib
+You've used 33 entries,
+            4130 wiz_defined-function locations,
+            1292 strings with 14795 characters,
+and the built_in function-call counts, 14169 in all, are:
+= -- 1668
+> -- 453
+< -- 88
++ -- 154
+- -- 112
+* -- 879
+:= -- 1821
+add.period$ -- 121
+call.type$ -- 33
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 691
+empty$ -- 1319
+format.name$ -- 112
+if$ -- 3519
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 0
+newline$ -- 218
+num.names$ -- 141
+pop$ -- 220
+preamble$ -- 1
+purify$ -- 104
+quote$ -- 0
+skip$ -- 582
+stack$ -- 0
+substring$ -- 774
+swap$ -- 467
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 97
+width$ -- 35
+write$ -- 469
