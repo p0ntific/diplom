@@ -12,7 +12,7 @@ from spbgu_palette import (  # noqa: E402
     SPBGU_BLUE,
     SPBGU_GRAY,
     SPBGU_RED,
-    SPBGU_YELLOW,
+    SPBGU_SLATE,
     apply_spbgu_style,
 )
 
@@ -25,16 +25,17 @@ ax_bars = fig.add_subplot(gs[0])
 ax_bottom = fig.add_subplot(gs[1])
 
 fig.suptitle(
-    "Валидация на реальных данных: generalization gap",
+    "Валидация на реальных данных: рост error rate",
     fontsize=15,
     fontweight="bold",
     color=DARK,
     y=0.97,
 )
 
+# Error rate в %.
 models = ["pro_baseline", "train_synth_250", "lite_latest_v2", "train_mixed_500"]
-combined = [81.8, 94.6, 98.4, 99.4]
-real = [82.8, 89.2, 96.8, 98.8]
+combined = [18.2, 5.4, 1.6, 0.6]
+real = [17.2, 10.8, 3.2, 1.2]
 gaps = [r - c for r, c in zip(real, combined)]
 
 x = np.arange(len(models))
@@ -45,7 +46,7 @@ b1 = ax_bars.bar(
     combined,
     w,
     label="benchmark-combined",
-    color=SPBGU_YELLOW,
+    color=SPBGU_SLATE,
     edgecolor=BG,
     linewidth=1.5,
 )
@@ -63,7 +64,7 @@ for bar in b1:
     h = bar.get_height()
     ax_bars.text(
         bar.get_x() + bar.get_width() / 2,
-        h + 0.4,
+        h + 0.25,
         f"{h:.1f}",
         ha="center",
         va="bottom",
@@ -75,7 +76,7 @@ for bar in b2:
     h = bar.get_height()
     ax_bars.text(
         bar.get_x() + bar.get_width() / 2,
-        h + 0.4,
+        h + 0.25,
         f"{h:.1f}",
         ha="center",
         va="bottom",
@@ -87,8 +88,8 @@ for bar in b2:
 for i in range(len(models)):
     gap = gaps[i]
     sign = "+" if gap >= 0 else ""
-    top = max(combined[i], real[i]) + 2.5
-    color = SPBGU_BLUE if abs(gap) <= 1.6 else SPBGU_RED
+    top = max(combined[i], real[i]) + 1.7
+    color = SPBGU_RED if gap > 1.6 else SPBGU_BLUE
     ax_bars.text(
         x[i],
         top,
@@ -102,9 +103,9 @@ for i in range(len(models)):
 
 ax_bars.set_xticks(x)
 ax_bars.set_xticklabels(models, fontsize=11)
-ax_bars.set_ylabel("Accuracy, %", fontsize=12)
-ax_bars.set_ylim(75, 107)
-ax_bars.legend(frameon=True, facecolor=BG, edgecolor=SPBGU_GRAY, fontsize=10, loc="upper left")
+ax_bars.set_ylabel("Error rate, %", fontsize=12)
+ax_bars.set_ylim(0, max(real) + 5)
+ax_bars.legend(frameon=True, facecolor=BG, edgecolor=SPBGU_GRAY, fontsize=10, loc="upper right")
 ax_bars.grid(axis="y", color=SPBGU_GRAY, alpha=0.25)
 
 ax_bottom.axis("off")
@@ -112,7 +113,7 @@ ax_bottom.axis("off")
 ax_bottom.text(
     0.25,
     0.65,
-    "−0.6 п.п.",
+    "+0.6 п.п.",
     ha="center",
     va="center",
     fontsize=34,
@@ -143,7 +144,7 @@ ax_bottom.plot(
 ax_bottom.text(
     0.75,
     0.65,
-    "−5.4 п.п.",
+    "+5.4 п.п.",
     ha="center",
     va="center",
     fontsize=34,
@@ -154,7 +155,7 @@ ax_bottom.text(
 ax_bottom.text(
     0.75,
     0.25,
-    "train_synth_250 — максимальный gap",
+    "train_synth_250 — максимальный рост error rate",
     ha="center",
     va="center",
     fontsize=11,

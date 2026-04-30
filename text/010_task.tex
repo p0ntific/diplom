@@ -36,11 +36,11 @@
 \subsection{Гипотезы исследования}
 
 \begin{hypothesis}\label{hyp:lora_significance}
-(H1a, значимость улучшения.) Дообучение модели YandexGPT~Lite методом LoRA статистически значимо снижает долю ошибок классификации первого вызова инструмента на~бенчмарке \texttt{benchmark-combined} по~сравнению с~базовой моделью YandexGPT~5.1~Pro (accuracy~$= 81{,}8\%$). Проверка~--- односторонний точный критерий Макнемара, $\alpha = 0{,}05$.
+(H1a, значимость улучшения.) Дообучение модели YandexGPT~Lite методом LoRA статистически значимо снижает долю ошибок классификации первого вызова инструмента на~бенчмарке \texttt{benchmark-combined} по~сравнению с~базовой моделью YandexGPT~5.1~Pro (error rate $\mathrm{ER}_0 = 18{,}2\%$). Проверка~--- односторонний точный критерий Макнемара, $\alpha = 0{,}05$.
 \end{hypothesis}
 
 \begin{hypothesis}\label{hyp:lora_threshold}
-(H1b, превышение порога.) Нижняя граница 95\%-го bootstrap-доверительного интервала accuracy лучшей дообученной модели на~бенчмарке \texttt{benchmark-combined} превышает~$0{,}90$, что соответствует требованию прикладной системы к~точности классификации.
+(H1b, превышение порога.) Верхняя граница 95\%-го bootstrap-доверительного интервала error rate лучшей дообученной модели на~бенчмарке \texttt{benchmark-combined} не превосходит~$0{,}10$, что соответствует требованию прикладной системы к точности классификации (accuracy выше~$90\%$).
 \end{hypothesis}
 
 \begin{hypothesis}\label{hyp:data_quality}
@@ -52,7 +52,7 @@
 Для систематической проверки сформулированных гипотез определим следующие исследовательские вопросы:
 
 \begin{description}
-    \item[\textsc{RQ1}.] \emph{Каково влияние дообучения на метрики классификации?} --- Количественная оценка изменений accuracy, macro~F1, precision и recall по классам $t_{\mathrm{GEO}}$ и $t_{\mathrm{TAG}}$ между базовой моделью $f_{\theta_0}$ и дообученными моделями $f_{\theta^*}$ на бенчмарках \texttt{benchmark-combined} (500 примеров: 326~GEO / 174~TAG) и \texttt{benchmark-real} (250 примеров: 203~GEO / 47~TAG).
+    \item[\textsc{RQ1}.] \emph{Каково влияние дообучения на метрики классификации?} --- Количественная оценка изменений error rate, macro~F1, precision и recall по классам $t_{\mathrm{GEO}}$ и $t_{\mathrm{TAG}}$ между базовой моделью $f_{\theta_0}$ и дообученными моделями $f_{\theta^*}$ на бенчмарках \texttt{benchmark-combined} (500 примеров: 326~GEO / 174~TAG) и \texttt{benchmark-real} (250 примеров: 203~GEO / 47~TAG).
 
     \item[\textsc{RQ2}.] \emph{Как зависит качество классификации от объёма обучающих данных?} --- Анализ зависимости метрик от размера обучающей выборки при фиксированном составе и качестве данных.
 
@@ -75,7 +75,7 @@
     \toprule
     \textbf{Метрика} & \textbf{Baseline} & \textbf{Цель} & \textbf{Бенчмарк} \\
     \midrule
-    Accuracy           & $81{,}8\%$ & $> 90\%$  & combined \\
+    Error rate         & $18{,}2\%$ & $< 10\%$  & combined \\
     Macro F1           & $0{,}526$  & $> 0{,}85$ & combined \\
     Recall ($t_{\mathrm{TAG}}$) & $49{,}4\%$ & $> 75\%$  & combined \\
     Без tool\_call ($\rho_{\varnothing}$) & $6{,}8\%$  & $< 3\%$   & combined \\

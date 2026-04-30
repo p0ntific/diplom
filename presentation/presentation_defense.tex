@@ -97,7 +97,7 @@
 \begin{column}{0.55\textwidth}
 YandexGPT~5.1~Pro \emph{без дообучения} на benchmark-combined (500 запросов):
 \begin{itemize}
-  \item Accuracy $= 81{,}8\%$
+  \item Error rate $= 18{,}2\%$ (91 ошибочный ответ из 500)
   \item Macro $F_1 = 0{,}526$
   \item Recall класса TAG $= 49{,}4\%$
   \item Без \texttt{tool\_call}: $\rho_\varnothing = 6{,}8\%$ (34 запроса)
@@ -179,7 +179,7 @@ YandexGPT~5.1~Pro \emph{без дообучения} на benchmark-combined (50
 \hphantom{aaaa}\emph{Тест:} односторонний McNemar, $\alpha = 0{,}05$.
 
 \smallskip
-\textbf{H1b (порог).} Нижняя граница 95\,\% bootstrap-CI accuracy лучшей модели $> 0{,}9$.
+\textbf{H1b (порог).} Верхняя граница 95\,\% bootstrap-CI error rate лучшей модели $< 0{,}10$ (т.\,е.\ accuracy $> 90\%$).
 
 \smallskip
 \textbf{H2 (качество $>$ объём).} Сбалансированный микс реальных и синтетических данных превосходит чистую синтетику при равном или большем объёме.
@@ -190,7 +190,7 @@ YandexGPT~5.1~Pro \emph{без дообучения} на benchmark-combined (50
 \toprule
 \textbf{Метрика} & \textbf{Baseline} & \textbf{Цель} & \textbf{Бенчмарк} \\
 \midrule
-Accuracy                 & $81{,}8\%$ & $> 90\%$  & combined \\
+Error rate               & $18{,}2\%$ & $< 10\%$  & combined \\
 Macro $F_1$              & $0{,}526$  & $> 0{,}85$ & combined \\
 Recall ($t_{\mathrm{TAG}}$) & $49{,}4\%$ & $> 75\%$ & combined \\
 $\rho_\varnothing$       & $6{,}8\%$  & $< 3\%$    & combined \\
@@ -369,7 +369,7 @@ Knowledge is learnt during pretraining; alignment teaches the model \emph{which 
 \includegraphics[width=0.85\linewidth,height=0.78\textheight,keepaspectratio]{pictures/model_comparison.png}
 \end{center}
 \vspace{-0.5em}
-{\small \textbf{Чемпион~— \texttt{train\_mixed\_500}:} accuracy $99{,}4\%$, Macro $F_1 = 0{,}996$, 1 ошибка / 500. $\rho_\varnothing$: $6{,}8\% \to 0{,}4\%$.}
+{\small \textbf{Чемпион~— \texttt{train\_mixed\_500}:} error rate $0{,}6\%$ (3 ош. из 500, в т.\,ч.\ 2~$\rho_\varnothing$), Macro $F_1 = 0{,}996$. ER baseline → mixed: $18{,}2\% \to 0{,}6\%$ (×30). $\rho_\varnothing$: $6{,}8\% \to 0{,}4\%$.}
 \end{frame}
 
 %% =========================================================
@@ -381,8 +381,8 @@ Knowledge is learnt during pretraining; alignment teaches the model \emph{which 
 \includegraphics[width=0.7\linewidth,height=0.72\textheight,keepaspectratio]{pictures/saturation_curve.png}
 \end{center}
 \vspace{-0.6em}
-{\small Синтетика: пик $97{,}8\%$ на 500, деградация на 908. \quad
-500 mixed $>$ 908 synthetic $>$ best $\sim$1500 synthetic run.}
+{\small Синтетика: минимум error rate $2{,}2\%$ на 500, рост до $4{,}4\%$ на 908. \quad
+500 mixed ($0{,}6\%$) $<$ 908 synthetic $<$ best $\sim$1500 synthetic run.}
 \end{frame}
 
 %% =========================================================
@@ -394,7 +394,7 @@ Knowledge is learnt during pretraining; alignment teaches the model \emph{which 
 \includegraphics[width=0.78\linewidth,height=0.74\textheight,keepaspectratio]{pictures/generalization_gap.png}
 \end{center}
 \vspace{-0.5em}
-{\small Чисто синтетика теряет $-2{,}2\ldots-5{,}4$~п.п.; \texttt{train\_mixed\_500}~— минимум $-0{,}6$~п.п.\ ($98{,}8\%$).}
+{\small Чисто синтетика прибавляет $+2{,}2\ldots +5{,}4$~п.п.\ к error rate на real; \texttt{train\_mixed\_500}~— минимум $+0{,}6$~п.п.\ (ER $1{,}2\%$).}
 \end{frame}
 
 %% =========================================================
@@ -408,7 +408,7 @@ Knowledge is learnt during pretraining; alignment teaches the model \emph{which 
 \end{column}
 \begin{column}{0.38\textwidth}
 \textbf{Внешне противоречие:}\\
-accuracy $= 0{,}946$, но Macro $F_1 = 0{,}631$.
+error rate $= 5{,}4\%$, но Macro $F_1 = 0{,}631$.
 
 \smallskip
 \textbf{Объяснение:}\\
@@ -489,15 +489,15 @@ $F_1$ для класса с \texttt{support}$=0$ равен 0; macro-усред
 \end{frame}
 
 %% =========================================================
-%% 20. Bootstrap-CI accuracy на real
+%% 20. Bootstrap-CI error rate
 %% =========================================================
 \begin{frame}
-\frametitle{Bootstrap-CI accuracy на benchmark-real}
+\frametitle{Bootstrap-CI error rate на benchmark-combined}
 \begin{center}
 \includegraphics[width=0.85\linewidth,height=0.78\textheight,keepaspectratio]{pictures/accuracy_ci.png}
 \end{center}
 \vspace{-0.5em}
-{\small H1b подтверждена: нижняя граница CI \texttt{train\_mixed\_500} $= 0{,}972 > 0{,}90$.}
+{\small H1b подтверждена: верхняя граница CI \texttt{train\_mixed\_500} $= 0{,}014 < 0{,}10$ (т.\,е.\ accuracy $> 90\%$).}
 \end{frame}
 
 %% =========================================================
@@ -506,9 +506,9 @@ $F_1$ для класса с \texttt{support}$=0$ равен 0; macro-усред
 \begin{frame}
 \frametitle{Ответы на исследовательские вопросы}
 \begin{description}
-  \item[\textsc{RQ1.}] LoRA-дообучение поднимает accuracy с $81{,}8\%$ до $99{,}4\%$ ($+17{,}6$~п.п.); все различия значимы.
-  \item[\textsc{RQ2.}] Зависимость немонотонна: 50 примеров уже дают $94{,}6\%$, пик на 500 синтетике, деградация на 908.
-  \item[\textsc{RQ3.}] Тип данных решает: чисто синтетика теряет до $-5{,}4$~п.п.\ на real; mixed-стратегия даёт $-0{,}6$.
+  \item[\textsc{RQ1.}] LoRA-дообучение снижает error rate с $18{,}2\%$ до $0{,}6\%$ (более чем в~$30$~раз); все различия значимы.
+  \item[\textsc{RQ2.}] Зависимость немонотонна: при 50 примерах ER $= 5{,}4\%$, минимум $2{,}2\%$ на 500 синтетике, рост до $4{,}4\%$ на 908.
+  \item[\textsc{RQ3.}] Тип данных решает: чисто синтетика прибавляет до $+5{,}4$~п.п.\ к error rate на real; mixed-стратегия~--- лишь $+0{,}6$~п.п.
   \item[\textsc{RQ4.}] H1a, H1b, H2~— подтверждены строгими тестами.
 \end{description}
 \end{frame}

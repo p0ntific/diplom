@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.8)  30 APR 2026 12:07
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.8)  30 APR 2026 22:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1895,18 +1895,6 @@ Space,Extension=.otf,UprightFont=*tt,ItalicFont=*it,BoldFont=*tb,BoldItalicFont
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 8--9
-\TU/cmun(3)/m/n/14.4 YandexGPT 5.1 Pro [[]], используемая в качестве ядра агент
-а,
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 8--9
-\TU/cmun(3)/m/n/14.4 на объединённом бенчмарке из 500 примеров достигает точнос
-ти
- []
-
-
 Underfull \hbox (badness 1348) in paragraph at lines 8--9
 \TU/cmun(3)/m/n/14.4 непригодной для промышленного применения без дополнительно
 й
@@ -1936,21 +1924,10 @@ Underfull \hbox (badness 1009) in paragraph at lines 39--40
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 43--44
-\TU/cmun(3)/m/it/14.4 bootstrap-доверительного интервала accuracy лучшей дообуч
-енной
- []
-
-
-Underfull \hbox (badness 2005) in paragraph at lines 43--44
+Underfull \hbox (badness 3019) in paragraph at lines 43--44
 \TU/cmun(3)/m/it/14.4 модели на бенчмарке \TU/cmun(4)/m/it/14.4 benchmark-combi
-ned \TU/cmun(3)/m/it/14.4 превышает $\OT1/cmr/m/n/14.4 0[]90$\TU/cmun(3)/m/it/1
-4.4 , что
- []
-
-
-Underfull \hbox (badness 4792) in paragraph at lines 43--44
-\TU/cmun(3)/m/it/14.4 соответствует требованию прикладной системы к точности
+ned \TU/cmun(3)/m/it/14.4 не превосходит $\OT1/cmr/m/n/14.4 0[]10$\TU/cmun(3)/m
+/it/14.4 ,
  []
 
 [8] [9] [10]) (./020_related.tex [11]
@@ -2020,41 +1997,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--162
 []\TU/cmun(3)/m/n/14.4 В качестве базовой модели для дообучения используется
  []
 
-[33] [34] [35]) (./050_experiment.tex [36]
-Overfull \hbox (6.73653pt too wide) in paragraph at lines 20--28
- [][] 
- []
-
-
-Underfull \hbox (badness 1024) in paragraph at lines 30--31
-\TU/cmun(3)/m/n/14.4 ду классами. Анализ матрицы ошибок выявляет систематически
-й
- []
-
-[37]
+[33] [34] [35]) (./050_experiment.tex [36] [37]
 File: figures/accuracy_ci.png Graphic file (type bmp)
 <figures/accuracy_ci.png>
 
-Underfull \hbox (badness 7486) in paragraph at lines 75--75
-[]\TU/cmun(3)/m/n/14.4 Рис. 5: |Accuracy всех 12 моделей на \TU/cmun(4)/m/n/14.
-4 benchmark-combined \TU/cmun(3)/m/n/14.4 с
+Underfull \hbox (badness 4254) in paragraph at lines 73--73
+[]\TU/cmun(3)/m/n/14.4 Рис. 5: |Error rate всех 12 моделей на \TU/cmun(4)/m/n/1
+4.4 benchmark-combined \TU/cmun(3)/m/n/14.4 с
  []
 
 [38] [39]
+Underfull \hbox (badness 1264) in paragraph at lines 130--131
+\OT1/cmr/m/n/14.4 ^^A[] = +0[]006$\TU/cmun(3)/m/n/14.4 , что свидетельствует о 
+высокой робастности, до-
+ []
+
 File: figures/generalization_gap.png Graphic file (type bmp)
 <figures/generalization_gap.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
-[]\TU/cmun(3)/m/n/14.4 Рис. 6: |Обобщающий разрыв: $\OT1/cmr/m/n/14.4 ^^A$\TU/c
-mun(3)/m/n/14.4 accuracy при переходе с
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
-\TU/cmun(4)/m/n/14.4 benchmark-combined \TU/cmun(3)/m/n/14.4 на \TU/cmun(4)/m/n
-/14.4 benchmark-real\TU/cmun(3)/m/n/14.4 . Отрицательные значе-
- []
-
 [40] [41]
 File: figures/saturation_curve.png Graphic file (type bmp)
 <figures/saturation_curve.png>
@@ -2078,46 +2037,21 @@ Underfull \hbox (badness 1424) in paragraph at lines 227--228
 [44]
 File: figures/group_per_model_errors.png Graphic file (type bmp)
 <figures/group_per_model_errors.png>
-
+ [45]
 Underfull \hbox (badness 1997) in paragraph at lines 274--275
 []\TU/cmun(3)/m/n/14.4 Анализ пересечения ошибок выявляет важный феномен: мно-
  []
 
-[45] [46] [47] [48] [49]
+[46] [47] [48] [49]
 File: figures/group_mcnemar_heatmap.png Graphic file (type bmp)
 <figures/group_mcnemar_heatmap.png>
-
+ [50]
 Underfull \hbox (badness 1400) in paragraph at lines 397--398
 []\TU/cmun(3)/m/n/14.4 Данные результаты означают, что на реальных данных нали-
 
  []
 
-[50]
-Underfull \hbox (badness 1478) in paragraph at lines 415--416
- []\TU/cmun(3)/b/sc/14.4 RQ1\TU/cmun(3)/b/n/14.4 : Каково влияние дообучения на
- метрики классифи-
- []
-
-
-Underfull \hbox (badness 5726) in paragraph at lines 415--416
-\TU/cmun(3)/b/n/14.4 кации?[] \TU/cmun(3)/m/n/14.4 Дообучение методом LoRA прив
-одит к статистически
- []
-
-
-Underfull \hbox (badness 1655) in paragraph at lines 415--416
-\TU/cmun(3)/m/n/14.4 до $\OT1/cmr/m/n/14.4 0[]996$ \TU/cmun(3)/m/n/14.4 ($\OT1/
-cmr/m/n/14.4 +0[]470$\TU/cmun(3)/m/n/14.4 ). Даже наименее успешная дообученная
- модель
- []
-
-
-Underfull \hbox (badness 2680) in paragraph at lines 415--416
-\TU/cmun(3)/m/n/14.4 моделей. Результат статистически значим по критерию Кохрен
-а
- []
-
-[51] [52]) (./070_threats.tex
+[51] [52] [53]) (./070_threats.tex
 Underfull \hbox (badness 1939) in paragraph at lines 10--11
 \TU/cmun(3)/m/n/14.4 бенчмарке в одном прогоне без усреднения. Сэмплирование пр
 и
@@ -2129,33 +2063,21 @@ Underfull \hbox (badness 1552) in paragraph at lines 18--19
 менты проведены на
  []
 
-[53
+[54
 
 ]
-Underfull \hbox (badness 2142) in paragraph at lines 26--27
-\TU/cmun(3)/m/n/14.4 в ответе модели. Качество последующего многошагового взаим
-о-
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 26--27
-\TU/cmun(3)/m/n/14.4 действия (передача корректных аргументов, обработка резуль
-тата
- []
-
-
 Underfull \hbox (badness 1424) in paragraph at lines 32--33
 \TU/cmun(3)/m/n/14.4 что ограничивает способность обнаруживать малые, но реальн
 ые
  []
 
-[54]) (./080_implementation.tex [55] [56]
+[55]) (./080_implementation.tex [56] [57]
 Underfull \hbox (badness 2302) in paragraph at lines 20--21
 []\TU/cmun(3)/m/n/14.4 Центральным компонентом подсистемы статистического анали
 -
  []
 
-[57]
+[58]
 Underfull \hbox (badness 1490) in paragraph at lines 44--45
 \TU/cmun(3)/m/n/14.4 примеры через LLM, чтобы придать им стилистическое разнооб
 -
@@ -2166,19 +2088,19 @@ Underfull \hbox (badness 3679) in paragraph at lines 44--45
 \TU/cmun(3)/m/n/14.4 Полученные данные конвертируются в формат JSONL классом
  []
 
-[58]) (./090_conclusion.tex [59] [60]
+[59]) (./090_conclusion.tex [60] [61]
 Underfull \hbox (badness 1394) in paragraph at lines 6--7
 \TU/cmun(3)/m/n/14.4 агенте, функционирующем в домене недвижимости. Исследовани
 е
  []
 
-[61]
+[62]
 Underfull \hbox (badness 2781) in paragraph at lines 25--26
 \TU/cmun(3)/m/n/14.4 задачах классификации. Во-вторых, сформулированы конкретны
 е
  []
 
-[62]) [63] (./vkr.bbl [64]
+[63]) [64] (./vkr.bbl [65]
 LaTeX Info: Redefining \rmfamily on input line 15.
 LaTeX Info: Redefining \sffamily on input line 15.
 LaTeX Info: Redefining \ttfamily on input line 15.
@@ -2209,7 +2131,7 @@ LaTeX Info: Redefining \ttfamily on input line 80.
 LaTeX Info: Redefining \rmfamily on input line 88.
 LaTeX Info: Redefining \sffamily on input line 88.
 LaTeX Info: Redefining \ttfamily on input line 88.
- [65]
+ [66]
 LaTeX Info: Redefining \rmfamily on input line 96.
 LaTeX Info: Redefining \sffamily on input line 96.
 LaTeX Info: Redefining \ttfamily on input line 96.
@@ -2257,7 +2179,7 @@ Underfull \hbox (badness 1286) in paragraph at lines 156--159
 LaTeX Info: Redefining \rmfamily on input line 161.
 LaTeX Info: Redefining \sffamily on input line 161.
 LaTeX Info: Redefining \ttfamily on input line 161.
-[66]
+[67]
 LaTeX Info: Redefining \rmfamily on input line 169.
 LaTeX Info: Redefining \sffamily on input line 169.
 LaTeX Info: Redefining \ttfamily on input line 169.
@@ -2291,7 +2213,7 @@ LaTeX Info: Redefining \ttfamily on input line 225.
 LaTeX Info: Redefining \rmfamily on input line 231.
 LaTeX Info: Redefining \sffamily on input line 231.
 LaTeX Info: Redefining \ttfamily on input line 231.
-[67]
+[68]
 LaTeX Info: Redefining \rmfamily on input line 238.
 LaTeX Info: Redefining \sffamily on input line 238.
 LaTeX Info: Redefining \ttfamily on input line 238.
@@ -2309,7 +2231,7 @@ Underfull \hbox (badness 3861) in paragraph at lines 262--270
 []\TU/cmun(0)/m/n/14.4 Горошко А. В. Исследование влияния дообучения большой
  []
 
-) [68] (./vkr.aux)
+) [69] (./vkr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2318,12 +2240,12 @@ Package rerunfilecheck Info: File `vkr.out' has not changed.
 (rerunfilecheck)             Checksum: 8D8F0E0759818E603BD1ED2C58571A8A;12362.
  ) 
 Here is how much of TeX's memory you used:
- 45324 strings out of 474773
- 1001411 string characters out of 5757725
- 1934839 words of memory out of 5000000
- 66613 multiletter control sequences out of 15000+600000
+ 45325 strings out of 474773
+ 1001439 string characters out of 5757725
+ 1935839 words of memory out of 5000000
+ 66614 multiletter control sequences out of 15000+600000
  572586 words of font info for 167 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,16n,131p,1016b,1392s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,16n,131p,1095b,1392s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on vkr.xdv (68 pages, 999756 bytes).
+Output written on vkr.xdv (69 pages, 1008892 bytes).

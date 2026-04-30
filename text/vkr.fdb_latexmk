@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex vkr"] 1777540037.1673 "vkr.aux" "vkr.bbl" "vkr" 1777540044.75763 0
+["bibtex vkr"] 1777576058.21782 "vkr.aux" "vkr.bbl" "vkr" 1777576065.49444 0
   "./ugost2008ls.bst" 1771340983.16685 43109 1ff9efac036b66c7f4bb7c8999e7e194 ""
   "./vkr.bib" 1777296828.1504 10038 74ac4beb70acf9d5be5322da6c5f1333 ""
-  "vkr.aux" 1777540040.72051 44024 8d3eeaf795b1ff8b112f268e123ee493 "xelatex"
+  "vkr.aux" 1777575223.27128 44941 38408e098f63927de8b7579deb6e5227 "xelatex"
   (generated)
   "vkr.bbl"
   "vkr.blg"
   (rewritten before read)
-["xdvipdfmx"] 1777540041.02927 "vkr.xdv" "vkr.pdf" "vkr" 1777540044.76004 0
-  "vkr.xdv" 1777540040.72446 999756 000fe5dafc6a99265cb1635fa116bc4b "xelatex"
+["xdvipdfmx"] 1777576061.86909 "vkr.xdv" "vkr.pdf" "vkr" 1777576065.4971 0
+  "vkr.xdv" 1777575223.32453 1008892 e3eae367759a7a7f5900c673a052bd16 "xelatex"
   (generated)
   "vkr.pdf"
   (rewritten before read)
-["xelatex"] 1777540037.30074 "vkr.tex" "vkr.xdv" "vkr" 1777540044.75771 0
+["xelatex"] 1777576058.32797 "vkr.tex" "vkr.xdv" "vkr" 1777576065.49466 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -281,31 +281,31 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1736367900 10850165 9e68ef31572b29fd0db66a7518d729c8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "000_intro.tex" 1776870633.51951 7342 2609517990c68f6268e97bea4bec152f ""
-  "010_task.tex" 1777296811.09254 11728 e26c6de4e81854c263efaa3abf0c48ea ""
+  "000_intro.tex" 1777574733.66026 7512 dc5166a4b60bb2a8eee2a7664a8556eb ""
+  "010_task.tex" 1777574702.67858 11786 d85eca110c0ebaaff3d2ee2ddde3c629 ""
   "020_related.tex" 1777296881.157 20101 96e6487614f23f3b13ab0dfeb6708ff9 ""
-  "030_background.tex" 1777296897.81374 24851 ba87f10721e09e9ddeaa05915e89d8f2 ""
-  "040_method.tex" 1777296162.88134 26330 183789dae7fd374aafe645247028a1a6 ""
-  "050_experiment.tex" 1777296175.38413 41283 be906ad674d1b130b962d5b9f69c2707 ""
-  "070_threats.tex" 1776870613.26063 8485 953e6193c61502fec03b254ebe29d621 ""
+  "030_background.tex" 1777575987.33007 25370 3de41883b547b18251d5767afe73fb46 ""
+  "040_method.tex" 1777575018.22266 26334 c665d9b25048718bb552b1ea1d5e8007 ""
+  "050_experiment.tex" 1777576016.49943 42374 99ea1305caebfd06e125829a8bd0a9e4 ""
+  "070_threats.tex" 1777575087.93947 8489 95bf5a5513741377f10fd599b62fdcaf ""
   "080_implementation.tex" 1774733066.08592 13496 9ff36550c3bd8045b803ad8ac3e6b58a ""
-  "090_conclusion.tex" 1776870649.75357 10043 95357a94973df84bbbedf95cc1d21dcc ""
-  "figures/accuracy_ci.png" 1776870456.19442 211533 557f3af4f16ac96135e1828083891329 ""
+  "090_conclusion.tex" 1777575045.32197 10151 48548240da14dab729810da7d1548e8b ""
+  "figures/accuracy_ci.png" 1777576054.37736 173254 eddf7999a0d47827c7bddad6ef417b67 ""
   "figures/benchmark_composition.png" 1776870456.197 76340 c86a6f5aa58750021c5a4c9fa5fe0004 ""
   "figures/experiment_design.png" 1776870456.19927 144491 92b329b52d74791333d600e1a4134c9a ""
-  "figures/generalization_gap.png" 1776870456.20168 115576 fb6dad7fc139387a6ca8a29c4580effc ""
+  "figures/generalization_gap.png" 1777575200.74057 120218 af8ccc5ea42b277cbeed5906c8a30dc5 ""
   "figures/group_mcnemar_heatmap.png" 1776870456.21034 886799 f088a2ab2fb403b1b95ecbd0711918ef ""
   "figures/group_per_model_errors.png" 1776870456.21265 684871 37ac324e93b7f84c62a23e34ef83bb37 ""
-  "figures/saturation_curve.png" 1776870456.20608 136860 42151948b02a9e0360c7ec632b976cd9 ""
+  "figures/saturation_curve.png" 1777575200.73955 128973 cc37791885531fd58e753cc268414e98 ""
   "figures/training_sets.png" 1776870456.20803 78748 6716576b8b1fe3bc385974cea8ddaef3 ""
   "matmex-diploma-custom.cls" 1774733184.20314 23100 36e63300255dbe8ad3799bd2141b9546 ""
   "preamble.tex" 1776870760.96979 3273 0059136d5b967a91c6a10dffa51b1df4 ""
   "title.tex" 1776871809.92115 1188 6323dd35a977a9a013dfa0a76b3d74be ""
-  "vkr.aux" 1777540040.72051 44024 8d3eeaf795b1ff8b112f268e123ee493 "xelatex"
-  "vkr.bbl" 1777540037.29724 9859 379503283a7b879278365141729cc45c "bibtex vkr"
-  "vkr.out" 1777540040.72245 12362 8d8f0e0759818e603bd1ed2c58571a8a "xelatex"
+  "vkr.aux" 1777575223.27128 44941 38408e098f63927de8b7579deb6e5227 "xelatex"
+  "vkr.bbl" 1777576058.32448 9859 379503283a7b879278365141729cc45c "bibtex vkr"
+  "vkr.out" 1777575223.28434 12362 8d8f0e0759818e603bd1ed2c58571a8a "xelatex"
   "vkr.tex" 1776870699.1072 1025 30f03eeab07c49cc67f8ac16bacbfe56 ""
-  "vkr.toc" 1777540040.72439 10844 f21c8e13764942749513f16e4de3ba1e "xelatex"
+  "vkr.toc" 1777575223.33155 10844 ddbedad1b7f3168ea73ecfc284b44cb6 "xelatex"
   (generated)
   "vkr.aux"
   "vkr.log"

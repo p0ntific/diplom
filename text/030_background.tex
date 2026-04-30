@@ -56,13 +56,22 @@ $|\mathcal{C}| = 2$. Для каждого класса $c \in \mathcal{C}$ об
 элементы матрицы ошибок, построенной в стратегии <<один против всех>>
 (one-vs-rest) для класса $c$.
 
-\begin{definition}[Accuracy]
+\begin{definition}[Accuracy и error rate]
 \label{def:accuracy}
 Доля правильных ответов (accuracy) классификатора определяется как
 \begin{equation}
     \mathrm{Acc} = \frac{\mathrm{TP} + \mathrm{TN}}
                         {\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN}}.
     \label{eq:accuracy}
+\end{equation}
+Дополнительной величиной, эквивалентной accuracy, но удобной для оценки
+прогресса в режиме <<малого числа ошибок>>, является \emph{доля ошибок}
+(error rate):
+\begin{equation}
+    \mathrm{ER} \;=\; 1 - \mathrm{Acc}
+                  \;=\; \frac{\mathrm{FP} + \mathrm{FN}}
+                             {\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN}}.
+    \label{eq:error-rate}
 \end{equation}
 \end{definition}
 
@@ -386,7 +395,7 @@ $p \leqslant \alpha_{\mathrm{adj}}$, либо, что то же самое, ес
 Пусть $\mathcal{D} = \{(x_i, y_i, \hat{y}_i)\}_{i=1}^{n}$ ---
 тестовая выборка с истинными и предсказанными метками. Пусть
 $\theta = T(\mathcal{D})$ --- значение интересующей метрики
-(например, $F_1$, accuracy), вычисленное на выборке $\mathcal{D}$.
+(например, $F_1$, error rate), вычисленное на выборке $\mathcal{D}$.
 
 \begin{definition}[Бутстрап-выборка]
 \label{def:bootstrap-sample}

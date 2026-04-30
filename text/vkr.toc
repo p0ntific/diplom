@@ -17,8 +17,8 @@
 \contentsline {subsection}{\numberline {4.2}Метрики качества классификации}{19}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Низкоранговая адаптация (LoRA)}{20}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Статистические критерии сравнения классификаторов}{21}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Критерий $Q$ Кохрена}{21}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Критерий Макнемара}{22}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.1}Критерий $Q$ Кохрена}{22}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Критерий Макнемара}{23}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}Поправка Бонферрони}{24}{subsubsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.5}Бутстрап доверительные интервалы}{25}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Методология экспериментов}{27}{section.5}%
@@ -38,44 +38,44 @@
 \contentsline {subsubsection}{\numberline {5.5.4}Контроль воспроизводимости}{36}{subsubsection.5.5.4}%
 \contentsline {section}{\numberline {6}Результаты экспериментов и их анализ}{37}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Оценка базовой модели}{37}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Основные результаты дообучения}{38}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Основные результаты дообучения}{37}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Валидация на реальных данных}{39}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Анализ кривой обучения}{41}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Анализ типа обучающих данных}{43}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Анализ ошибок}{44}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Паттерны ошибок классификации}{44}{subsubsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6}Анализ ошибок}{45}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Паттерны ошибок классификации}{45}{subsubsection.6.6.1}%
 \contentsline {subsubsection}{\numberline {6.6.2}Консервация ошибок}{46}{subsubsection.6.6.2}%
 \contentsline {paragraph}{Воспроизводимость между бенчмарками.}{46}{section*.21}%
-\contentsline {paragraph}{Распределение ошибок по 12 моделям.}{46}{section*.23}%
+\contentsline {paragraph}{Распределение ошибок по 12 моделям.}{47}{section*.23}%
 \contentsline {paragraph}{Пересечение ошибочных множеств между моделями.}{47}{section*.25}%
-\contentsline {paragraph}{Лингвистический анализ <<трудного ядра>>.}{47}{section*.26}%
+\contentsline {paragraph}{Лингвистический анализ <<трудного ядра>>.}{48}{section*.26}%
 \contentsline {subsection}{\numberline {6.7}Статистическая значимость}{49}{subsection.6.7}%
 \contentsline {subsubsection}{\numberline {6.7.1}Критерий Кохрена}{49}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}Попарные сравнения (критерий Макнемара)}{49}{subsubsection.6.7.2}%
-\contentsline {paragraph}{\texttt {benchmark-combined}.}{49}{section*.28}%
+\contentsline {subsubsection}{\numberline {6.7.2}Попарные сравнения (критерий Макнемара)}{50}{subsubsection.6.7.2}%
+\contentsline {paragraph}{\texttt {benchmark-combined}.}{50}{section*.28}%
 \contentsline {paragraph}{\texttt {benchmark-real}.}{50}{section*.29}%
 \contentsline {subsubsection}{\numberline {6.7.3}Согласованность предсказаний}{51}{subsubsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.8}Ответы на исследовательские вопросы}{51}{subsection.6.8}%
-\contentsline {paragraph}{\textsc {RQ1}: Каково влияние дообучения на метрики классификации?}{51}{section*.31}%
-\contentsline {paragraph}{\textsc {RQ2}: Как зависит качество от объёма обучающих данных?}{51}{section*.32}%
-\contentsline {paragraph}{\textsc {RQ3}: Как тип обучающих данных влияет на робастность модели?}{52}{section*.33}%
-\contentsline {paragraph}{\textsc {RQ4}: Статистически значимы ли различия между моделями?}{52}{section*.34}%
-\contentsline {paragraph}{Проверка гипотез H1a и H1b.}{52}{section*.35}%
-\contentsline {section}{\numberline {7}Угрозы валидности}{53}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Внутренняя валидность}{53}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Внешняя валидность}{54}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Конструктная валидность}{54}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Статистическая валидность}{55}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Программная реализация}{56}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Архитектура системы}{56}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Подсистема статистического анализа}{57}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Подсистема инференса}{58}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Подсистема генерации данных}{59}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Обеспечение качества кода}{59}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Технологический стек}{59}{subsection.8.6}%
-\contentsline {section}{\numberline {9}Заключение}{61}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Направления дальнейших исследований}{63}{subsection.9.1}%
-\contentsline {section}{Список литературы}{65}{section*.37}%
+\contentsline {subsection}{\numberline {6.8}Ответы на исследовательские вопросы}{52}{subsection.6.8}%
+\contentsline {paragraph}{\textsc {RQ1}: Каково влияние дообучения на метрики классификации?}{52}{section*.31}%
+\contentsline {paragraph}{\textsc {RQ2}: Как зависит качество от объёма обучающих данных?}{52}{section*.32}%
+\contentsline {paragraph}{\textsc {RQ3}: Как тип обучающих данных влияет на робастность модели?}{53}{section*.33}%
+\contentsline {paragraph}{\textsc {RQ4}: Статистически значимы ли различия между моделями?}{53}{section*.34}%
+\contentsline {paragraph}{Проверка гипотез H1a и H1b.}{53}{section*.35}%
+\contentsline {section}{\numberline {7}Угрозы валидности}{54}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Внутренняя валидность}{54}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Внешняя валидность}{55}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Конструктная валидность}{55}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Статистическая валидность}{56}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Программная реализация}{57}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Архитектура системы}{57}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Подсистема статистического анализа}{58}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Подсистема инференса}{59}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Подсистема генерации данных}{60}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Обеспечение качества кода}{60}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Технологический стек}{60}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Заключение}{62}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Направления дальнейших исследований}{64}{subsection.9.1}%
+\contentsline {section}{Список литературы}{66}{section*.37}%
 \selectlanguage *[]{english}
 \selectlanguage *[]{english}
 \selectlanguage *[]{english}

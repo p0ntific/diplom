@@ -1,0 +1,99 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{REVIEW}\\[0.3em]
+\normalsize by the scientific supervisor on the bachelor's thesis\\
+of the SPbU undergraduate Goroshko Andrei Vitalievich,\\
+educational programme \mbox{СВ.5001.2022} ``Mathematics and Computer Science'',\\
+on the topic ``Analysis of the impact of YandexGPT fine-tuning on the correctness of function selection for retrieving data by the original user query''
+\end{center}
+
+\vspace{0.8em}
+
+The bachelor's thesis of A.~V.~Goroshko is devoted to an applied
+problem that has gained notable importance in recent years in the
+practice of building production AI agents based on large language
+models~--- the problem of \textit{tool selection}. The author
+formalises it as a binary classification task on the first function
+call and conducts a systematic experimental study of how
+parameter-efficient fine-tuning of a model can raise classification
+quality to a production-grade level.
+
+From an engineering perspective the work is performed at a high level.
+A.~V.~Goroshko independently designed and implemented in Python a
+modular software framework that supports the full reproducible cycle:
+generation and validation of training and evaluation datasets,
+conversion to JSONL, fine-tuning via the Yandex Cloud API, evaluation,
+parsing of tool calls and automatic computation of metrics. The
+architecture relies on dependency injection and a plug-in model of
+LLM clients, static type-checking with \texttt{mypy} and runtime data
+validation with \texttt{pydantic}, which matches modern standards for
+research code.
+
+A substantively strong feature of the work is its rigorous
+statistical protocol. The author correctly handles multiple
+comparisons: Cochran's $Q$ test is applied to the global hypothesis
+of homogeneity across the models, the exact McNemar test with a
+Bonferroni-adjusted significance level is used for pairwise
+comparisons, and the non-parametric bootstrap is used to construct
+confidence intervals.
+
+A no less important practical contribution of the thesis is the
+empirically grounded conclusion that the quality of training data
+takes precedence over its volume: a balanced mixed sample of 500
+examples reduces the error rate from $18.2\%$ for the baseline to
+$0.6\%$~--- by a factor of more than $30$~--- with only one
+misclassification on a 500-query benchmark and a robust transfer to
+the real user-query distribution, whereas scaling up purely synthetic
+data degrades quality due to generation artefacts. This result has
+direct practical applications in the development of production AI
+agents.
+
+Throughout the work A.~V.~Goroshko demonstrated strong independence,
+systems thinking, and the ability to carry an engineering solution
+through to a finished, documented result; he reacted constructively
+to comments, promptly introduced the necessary changes and
+meticulously prepared the final research materials.
+
+The intermediate results of the thesis received external recognition:
+A.~V.~Goroshko presented his work at the Congress of Young Scientists
+of ITMO University (section ``Software Engineering and Technologies'')
+and was awarded a first-degree diploma, which provides additional
+evidence of the academic and practical significance of the research.
+
+The bachelor's thesis of A.~V.~Goroshko is a complete and independent
+piece of research that meets all the requirements set for bachelor's
+qualification works in the field of study 02.03.01 ``Mathematics and
+Computer Science''. As the scientific supervisor I believe that this
+thesis is ready for defence and recommend that it be graded
+``\textbf{excellent~(A)}''.
+
+\vspace{1.2em}
+
+\noindent\textbf{Date:} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\vspace{2.5em}
+
+\noindent\begin{tabular}{@{}p{5cm}p{9cm}@{}}
+\textbf{Scientific supervisor,} & \textbf{associate professor, Department of Informatics, SPbU,} \\
+& A.~V.~Grigorieva \hfill \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{tabular}
+
+\end{document}
